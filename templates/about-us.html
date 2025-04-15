@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- <section class="section--about-hero">
+  <div class="about--hero-container">
+    <h1 class="about--heading">About Us</h1>
+  </div>
+</section> -->
+
+<section class="section--about-heading">
+  <div class="container">
+    <h1 class="contact--heading">About Us</h1>
+  </div>
+</section>
+
+<section>
+  <div class="about--hero-content">
+    <div class="container center-text">
+      <h3 class="heading-secondary">About Ascent Infosoft</h3>
+    </div>
+
+    <div class="container grid grid--2-cols grid-align">
+      <div>
+        <p class="about-content">
+          Ascent Infosoft is a premier IT company providing advanced
+          technology solutions to clients worldwide. We specialize in
+          software development, app development, and digital marketing,
+          delivering comprehensive end-to-end solutions tailored to meet
+          your business needs. Our expert team of mobile app developers
+          excels in creating custom, feature-rich apps designed to
+          captivate audiences and achieve your business objectives.
+        </p>
+
+        <p class="about-content">
+          At Ascent Infosoft, we utilize the latest tools, methodologies,
+          and development processes to build scalable, innovative, and
+          highly functional applications. Our commitment to innovative
+          approaches and inspiring ideas ensures that every project is
+          executed with the highest level of professionalism.
+        </p>
+
+        <p class="about-content">Why Choose Ascent Infosoft?</p>
+
+        <ul class="about-content about-content-list-bm">
+          <li class="about-content-list">Fast, Flexible & Cost-Effective Solutions</li>
+          <li class="about-content-list">Dedicated Resources on Demand</li>
+          <li class="about-content-list">On-Time Delivery</li>
+        </ul>
+
+        <p class="about-content--bp">
+          Trust Ascent Infosoft to be your reliable partner in navigating
+          the digital landscape and driving your business forward.
+        </p>
+      </div>
+
+      <div class="about-img">
+        <img class="img" src="{{ url_for('static', filename='images/about-us/about-img.jpg') }}" alt="Ascent Infosoft About" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--connect-with-us">
+  <div>
+    <div>
+      <h2 class="heading-tertiary center-text">Seeking tailor-made software solutions to drive your business forward?</h2>
+    </div>
+
+    <div class="center-text">
+      <a href="#" class="btn btn--form">Connect with our team!</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

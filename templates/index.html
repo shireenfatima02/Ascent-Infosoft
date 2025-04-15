@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        Leveraging technology for digital transformation!
+      </h1>
+
+      <p class="hero-description">
+        We specialize in developing innovative solutions for complex
+        challenges. While our primary focus is on the healthcare industry,
+        we also deliver top-notch solutions for educational institutions
+        and startups. Our expertise in creating fast and efficient mobile
+        and web applications is designed to help your business thrive.
+      </p>
+
+      <a href="#" class="btn">Start A Project</a>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/hero-img.jpg') }}"
+          alt="Software development company, software development services, web development company"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section-services">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Services</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- Web Design -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/web-design.png') }}"
+        alt="Web Design, web designing, UX/UI"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Web Design</p>
+
+        <p class="service-description">
+          Infuse your vision with creativity through our tailored visual
+          solutions. We specialize in crafting unique brand identities and
+          designing impactful collateral, bringing your ideas to life in a
+          way that captivates and inspires.
+          <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/web-development.png') }}"
+        alt="Web Development, websites, web applications"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Web Development</p>
+
+        <p class="service-description">
+          We create a compelling online presence for your business with
+          intuitive, user-friendly web designs that attract
+          attention! Our designs are crafted to
+          engage visitors and turn them into loyal customers.
+          <!-- We make your online presence hard to ignore with our intuitive, user-friendly web designs that convert big time! -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Software Development -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/software-development.png') }}"
+        alt="Software Development, customized software development, customized softwares"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Software Development</p>
+
+        <p class="service-description">
+          Transform your vision into a reality with our cutting-edge
+          software solutions. We specialize in creating powerful tools
+          that optimize your operations, enhance productivity, and drive
+          your business forward.
+          <!-- Bridge the gap between your vision and reality with our powerful software solutions that streamline your operations. -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Mobile Application Development -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/mobile-development.png') }}"
+        alt="Mobile Application Development, Android Development, mobile apps"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Mobile Application Development</p>
+
+        <p class="service-description">
+          Revolutionize your business with our custom mobile application
+          development services. Our proactive approach ensures that each
+          app is designed to enhance productivity and efficiency.
+          <!-- Revolutionize your business with our proactive IT services, tailored to enhance productivity and efficiency across your organization. -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Digital MArketing & SEO -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/digital-marketing.png') }}"
+        alt="Digital Marketing, SEO, Search Engine Optimization"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Digital Marketing and SEO</p>
+
+        <p class="service-description">
+          Achieve new heights with our targeted digital marketing
+          strategies and SEO tactics. We focus on measurable growth,
+          helping your business reach the right audience and maximize its
+          online presence.
+          <!-- Reach new and eloquent heights with our target-specific digital marketing strategies & tactics for measurable growth. -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Ecommerce Development -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/ecommerce-development.png') }}"
+        alt="Ecommerce Development, Ecommerce, Business"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Ecommerce Development</p>
+
+        <p class="service-description">
+          Elevate your online sales with our streamlined e-commerce
+          solutions. We help you sell smarter, not harder, by creating
+          efficient, user-friendly platforms that enhance the shopping
+          experience.
+          <!-- Streamlined e-commerce solutions to help you boost your online sales. Sell smarter, not harder. -->
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-about">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Bringing Your Vision to Life!</h2>
+  </div>
+
+  <div class="container grid grid--2-cols grid-align">
+    <div>
+      <p class="about-content">
+        Since our inception in 2001, Ascent Infosoft has been dedicated to
+        turning our clients' visions into reality. Founded as an IT
+        solutions company, our mission is to help businesses and
+        organizations excel in their respective fields through the power
+        of technology.
+      </p>
+
+      <p class="about-content">
+        Our team consists of highly skilled developers, designers, and
+        marketing professionals who specialize in crafting high-tech,
+        innovative apps, stunning websites, and custom software solutions.
+      </p>
+
+      <p class="about-content--bp">
+        Throughout these remarkable years, we have gained invaluable
+        experience and expertise by partnering with healthcare services,
+        startups, medium to large enterprises, educational institutions,
+        medical facilities, and more. Join us at Ascent Infosoft, where we
+        consistently deliver top-tier, cutting-edge digital products that
+        surpass expectations.
+      </p>
+    </div>
+
+    <div class="about-img">
+      <img
+        class="img"
+        src="{{ url_for('static', filename='images/about-img.jpg') }}"
+        alt="Laptop screen, web development, software development"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section-who-we-serve">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Our Expertise Across Industries</h2>
+  </div>
+
+  <div class="industries container grid grid--3-cols">
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/healthcare.png') }}"
+        alt="Healthcare, hospitals, hospital management"
+      />
+
+      <p class="industry-name">Healthcare and Medical</p>
+    </div>
+
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/education.png') }}"
+        alt="Education, institutions, softwares or applications for institutes"
+      />
+
+      <p class="industry-name">Education</p>
+    </div>
+
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/startup.png') }}"
+        alt="Startups, business, companies"
+      />
+
+      <p class="industry-name">Startups</p>
+    </div>
+
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/finance.png') }}"
+        alt="Finance, software for finance comapnies"
+      />
+
+      <p class="industry-name">Finance</p>
+    </div>
+
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/enterprises.png') }}"
+        alt="Enterprises, softwares for small to medium enterprises"
+      />
+
+      <p class="industry-name">Enterprises</p>
+    </div>
+
+    <div class="industry">
+      <img
+        class="industry-icon"
+        src="{{ url_for('static', filename='images/icons/industries.png') }}"
+        alt="Industries, software for all industries"
+      />
+
+      <p class="industry-name">All Industries</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-contact-us">
+  <div class="container">
+    <div class="contact">
+      <div class="contact-img-box">
+        <img
+          class="contact-img"
+          src="{{ url_for('static', filename='images/contact-us.png') }}"
+          alt="Contact Us, contact form"
+        />
+      </div>
+
+      <div class="contact-text-box">
+        <h2 class="heading-secondary center-text">Let's Connect!</h2>
+
+        <form class="contact-form" name="submit-request">
+          <div>
+            <!-- <label for="full-name">Name</label> -->
+            <input
+              id="full-name"
+              type="text"
+              placeholder="Your Name"
+              name="full-name"
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for="email">Email</label> -->
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for="mobile-number">Mobile Number</label> -->
+            <input
+              id="mobile-number"
+              type="text"
+              placeholder="Mobile Number"
+              name="mobile-number"
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for="message">Message</label> -->
+            <textarea
+              id="message"
+              type="text"
+              placeholder="Message"
+              name="message"
+            >
+            </textarea>
+          </div>
+          
+          <div class="submit-btn">
+            <button class="btn btn--form">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Contact Us</a>
+</li>
+
+{% endblock %}

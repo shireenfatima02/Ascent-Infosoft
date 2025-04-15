@@ -1,0 +1,468 @@
+/*  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  color: #555;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* -------------------
+    GENERIC CLASSES
+   ------------------- */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  row-gap: 6.2rem;
+  column-gap: 4rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--footer {
+  grid-template-columns: 1.6fr 0.9fr 0.5fr 1.5fr;
+}
+
+/* -------------------
+    HELPER CLASSES
+   ------------------- */
+
+.center-text {
+  text-align: center;
+}
+
+.about-content--bp {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 3.2rem;
+}
+
+/* -------------------
+    HEADINGS
+   ------------------- */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 4rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 4.8rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+
+  display: block;
+}
+
+/* -------------------
+    BUTTONS
+   ------------------- */
+
+.btn,
+.btn:link,
+.btn:visited {
+  color: #fff;
+  background-color: #51aee7;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  display: inline-block;
+}
+
+.btn--form {
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #339af0;
+}
+
+/* -------------------
+    HEADER
+   ------------------- */
+
+.header {
+  height: 9.6rem;
+  padding: 0 4.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 4.8rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 2.4rem;
+
+  display: flex;
+  gap: 4.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2.1rem;
+
+  display: inline-block;
+}
+
+/* -------------------
+    HERO
+   ------------------- */
+
+.section-hero {
+  padding: 4.8rem 0;
+}
+
+.hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 3.6rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* -------------------
+    SERVICES
+   ------------------- */
+
+.section-services {
+  padding: 3.2rem 0;
+}
+
+.service {
+  padding-top: 5.2rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 1.1rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-img {
+  height: 12.8rem;
+  width: 12.8rem;
+}
+
+.service-content {
+  padding: 4.3rem;
+  padding-top: 3.2rem;
+  padding-bottom: 5.2rem;
+}
+
+.service-heading {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.service-description {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* -------------------
+    ABOUT
+   ------------------- */
+
+.section-about {
+  padding: 4.8rem 0;
+}
+
+.about-content {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 3.2rem;
+  padding-bottom: 0;
+}
+
+.about-img {
+  padding-right: 3.2rem;
+}
+
+.img {
+  width: 100%;
+}
+
+.grid-align {
+  align-items: center;
+}
+
+/* -------------------
+    SERVES
+   ------------------- */
+
+.section-who-we-serve {
+  padding: 4.8rem;
+}
+
+.industry {
+  /* box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1); */
+  border: 0.5px solid #ddd;
+  border-radius: 1.1rem;
+  padding: 1.2rem;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.industry-icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 1.2rem;
+}
+
+.industry-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.8rem 0 1.2rem 0;
+}
+
+/* -------------------
+    CONTACT FORM
+   ------------------- */
+
+.section-contact-us {
+  padding: 9.6rem;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  align-items: center;
+}
+
+.contact-img {
+  width: 100%;
+}
+
+.contact-text-box {
+  padding: 6.4rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 1.1rem;
+}
+
+.contact .heading-secondary {
+  font-size: 3.6rem;
+}
+
+.contact-img-box {
+  padding: 1.2rem;
+  padding-left: 2.4rem;
+}
+
+.contact-form {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  row-gap: 2.4rem;
+}
+
+.contact-form input,
+.contact-form select {
+  color: inherit;
+  background-color: #f5f6f8;
+  width: 100%;
+  height: 4.8rem;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  color: inherit;
+  background-color: #f5f6f8;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+  width: 100%;
+  height: 15rem;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* -------------------
+    FOOTER
+   ------------------- */
+
+.footer {
+  padding: 9.6rem 0;
+  border-top: 1px solid #eee;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 1.8rem;
+}
+
+.social-links {
+  list-style: none;
+
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.footer-company-description {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  text-align: justify;
+  margin: 0 2.4rem 3.2rem 0;
+}
+
+.contact-icon {
+  height: 1.8rem;
+  width: 1.8rem;
+
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-style: normal;
+}
+
+.footer-nav {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: #767676;
+  text-decoration: none;
+  font-size: 1.6rem;
+
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+.footer-flex {
+  margin-bottom: 1.2rem;
+
+  display: flex;
+}

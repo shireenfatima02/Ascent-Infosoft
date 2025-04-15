@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block css %}
+    {% endblock %}
+
+    <title>Ascent Infosoft</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#">
+        <img class="logo" src="{{ url_for('static', filename='images/ascent_logo1.png') }}" alt="Ascent Infosoft logo" />
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="{{ url_for('index') }}" class="main-nav-link">Home</a></li>
+          <li>
+            <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
+          </li>
+          <li>
+            <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
+          </li>
+          <li>
+            <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+          </li>
+          <li>
+            <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a class="footer-logo" href="#">
+            <img class="logo" src="{{ url_for('static', filename='images/ascent_logo1.png') }}" alt="Ascent Infosoft logo" />
+          </a>
+
+          <p class="footer-company-description">
+            Ascent Infosoft is your one-stop destination for comprehensive
+            software development, web design, and app development solutions. As
+            a leading IT company, we deliver growth to our clients by utilizing
+            modern tools, diverse operating systems, and innovative
+            methodologies. Our goal-oriented and highly functional apps drive
+            success and scalability.
+          </p>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon
+                  class="footer-social-icon"
+                  name="logo-instagram"
+                >
+                </ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon
+                  class="footer-social-icon"
+                  name="logo-facebook"
+                >
+                </ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon
+                  class="footer-social-icon"
+                  name="logo-twitter"
+                >
+                </ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon
+                  class="footer-social-icon"
+                  name="logo-linkedin"
+                >
+                </ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Our Services</p>
+
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Web Design</a></li>
+            <li><a class="footer-link" href="#">Web Development</a></li>
+            <li><a class="footer-link" href="#">Software Development</a></li>
+            <li><a class="footer-link" href="#">Mobile App Development</a></li>
+            <li><a class="footer-link" href="#">Digital Marketing & SEO</a></li>
+            <li><a class="footer-link" href="#">Ecommerce Development</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Quick Links</p>
+
+          <ul class="footer-nav">
+            {% block footer_quick_links %}
+            {% endblock %}
+          </ul>
+        </nav>
+
+        <div class="contact-col">
+          <p class="footer-heading">Contact Us</p>
+
+          <address class="contacts">
+            <p class="footer-flex">
+              <ion-icon class="contact-icon" name="location-outline"></ion-icon>
+              <a class="footer-link" href="#">
+                Aurangabad, Maharashtra, India - 431001
+              </a>
+            </p>
+
+            <p class="footer-flex">
+              <ion-icon class="contact-icon" name="call-outline"></ion-icon>
+              <a class="footer-link" href="tel:+91-9373344880">
+                +91 9373344880
+              </a>
+            </p>
+
+            <p class="footer-flex">
+              <ion-icon class="contact-icon" name="mail-outline"></ion-icon>
+              <a class="footer-link" href="mailto:ascentinfosoft@gmail.com">
+                ascentinfosoft@gmail.com
+              </a>
+            </p>
+
+            <p class="footer-flex">
+              <ion-icon class="contact-icon" name="earth-outline"></ion-icon>
+              <a class="footer-link" href="https://ascentinfosoft.com/">
+                www.ascentinfosoft.com
+              </a>
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
