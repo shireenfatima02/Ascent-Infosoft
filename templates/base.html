@@ -31,7 +31,9 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="{{ url_for('index') }}" class="main-nav-link">Home</a></li>
+          <li>
+            <a href="{{ url_for('index') }}" class="main-nav-link">Home</a>
+          </li>
           <li>
             <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
           </li>
@@ -52,8 +54,8 @@
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+      {% block content %}
+      {% endblock %}
     </main>
 
     <footer class="footer">

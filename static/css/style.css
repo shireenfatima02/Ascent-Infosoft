@@ -48,6 +48,10 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--6-cols {
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .grid--footer {
   grid-template-columns: 1.6fr 0.9fr 0.5fr 1.5fr;
 }

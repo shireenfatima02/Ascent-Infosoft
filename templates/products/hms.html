@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section--product-hero">
+  <div class="product-hero center-text">
+    <img src="{{ url_for('static', filename='images/products/Hospital Icon.ico') }}" alt="HomoeoSoft, Hospital Management System, Ascent Infosoft" />
+    
+    <h1 class="heading-primary">HomoeoSoft</h1>
+
+    <h2 class="heading-primary">
+      An All-in-One Hospital Management System
+    </h2>
+
+    <p class="product-tagline">Seamless Patient Care. Smarter Administration. Superior Outcomes.</p>
+
+    <p class="hero-description center-text">
+      HomoeoSoft is a comprehensive hospital management solution designed to digitize and streamline 
+      clinical and administrative workflows for hospitals, clinics, and health institutions. 
+      From patient registration to final discharge, our system ensures efficiency, accuracy, 
+      and compliance — all in one place.
+    </p>
+  </div>
+</section>
+
+<section class="section--product-features">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Key Features & Capabilities</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Centralized Patient Registration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Register new patients and access returning patients with ease.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Maintain complete patient histories in a single, searchable database.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Unique ID generation for lifetime record tracking.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Out Patient (OPD) Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Effortless OPD entries with real-time data sync.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Access and manage previous visit records, prescriptions, and history.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Digital OPD case papers accessible anytime.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Medicine Dispensing for OPD & IPD</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Integrated pharmacy module for streamlined medicine issue.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automated dispensing logs linked with patient treatment records.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Administrative Control Panel</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Maintain and update departments, doctors, medicines, labs, and user roles.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Built-in analytics and automated reports for data-driven decision-making.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Diagnostics & Lab Integration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Prescribe pathological and radiological tests directly from the patient dashboard.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Attach, store, and view reports — accessible by both OPD and IPD departments.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Detailed investigation records maintained for each patient.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">In Patient (IPD) Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Manage IPD admissions, discharge summaries, and case papers.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Daily rounds, observations, treatment plans, and investigations — all logged digitally.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Track bed occupancy, status, and patient progress in real time.</p>
+          </li>
+        </ul>
+      </div>
+    </div>    
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary small-heading">Homeopathy & CCRH/NABH Alignment</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Built-in support for homeopathic case taking formats.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Structured as per CCRH and NABH guidelines.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Capture case data in a clinical, compliant, and standardized manner.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">ICD-11 Disease Classification</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Integrated WHO-specified ICD-11 encoding for accurate disease classification.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Facilitates global compliance and improved interoperability.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Special Registers</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Diet chart logs, physiotherapy schedules, and yoga therapy records for OPD & IPD.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Easily assign treatments and monitor patient responses over time.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Fees & Billing Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Track fees for:</p>
+          </li>
+          <li>Patient registration, OPD/IPD visits, medicines, diagnostics</li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Secure billing module with discounts, refunds, and dues tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Generate invoices instantly and maintain transaction logs.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Role-Based Access & Security</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Permissions based on roles (Doctor, Nurse, Receptionist, Admin, etc.).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Secure sensitive data and patient records from unauthorized access.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Case Correction & Editing</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Modify case details in case of data entry errors.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Admin-supervised correction logs for accountability and transparency.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Reports & Analytics</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Generate reports for:</p>
+          </li>
+          <li>Central Registration, OPD, IPD</li>
+          <li>Case Papers, Medicines, Investigations, IPD Occupancy</li>
+          <li>Fee collections and outstanding dues</li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Summary reports:</p>
+          </li>
+          <li>Day-wise, department-wise, gender-wise summary reports for both OPD and IPD</li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Export options in PDF/Excel formats.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--product-benefits">
+  <div class="container center-text">
+    <h2 class="heading-tertiary center-text">Built for Hospitals. Trusted by Practitioners.</h2>
+  </div>
+
+  <div class="container benefit-details">
+    <p>HomoeoSoft helps you:</p>
+    <li>Digitize operations.</li>
+    <li>Enhance patient satisfaction.</li>
+    <li>Reduce paperwork by 70%.</li>
+    <li>Reduce administrative overheads by up to 60%.</li>
+    <li>Improve patient turnaround time by 40%.</li>
+    <li>Ensure compliance with CCRH, NABH, and WHO standards.</li>
+    <!-- <li>Enhance data security and accessibility with cloud-powered infrastructure.</li> -->
+  </div>
+</section>
+
+<section class="section--product-connect">
+  <div class="container center-text">
+    <span class="subheading">Get Started Today</span>
+
+    <h1 class="heading-tertiary">Ready to modernize your hospital with HomoeoSoft?</h1>
+  </div>
+
+  <div class="product-contact">
+    <div>
+      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
+      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="last-p center-text">
+    <p>Let's revolutionize healthcare — one system at a time.</p>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

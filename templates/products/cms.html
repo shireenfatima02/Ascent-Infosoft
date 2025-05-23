@@ -1,0 +1,376 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section--product-hero">
+  <div class="product-hero center-text">
+    <h1 class="heading-primary">CMS</h1>
+
+    <h2 class="heading-primary">
+      A Comprehensive College Management System
+    </h2>
+
+    <p class="product-tagline">Streamlined Academics. Smart Administration. Future-Ready Education.</p>
+
+    <p class="hero-description center-text">
+      CMS is an all-in-one college management platform designed to automate and optimize 
+      academic operations, administrative workflows, and student services. From admissions to 
+      alumni management, our system brings efficiency, transparency, and innovation to educational 
+      institutions - all on a single platform.
+    </p>
+  </div>
+</section>
+
+<section class="section--product-features">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Key Features & Capabilities</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Student Lifecycle Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Complete admission process automation with online applications.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Unique student ID generation with lifetime academic records.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Batch-wise and department-wise student categorization.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Fees & Financial Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automated fee collection with payment gateway integration.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Scholarship and concession management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Financial aid tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Receipt generation and outstanding dues tracking.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Classroom & Attendance</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Smart attendance tracking with biometric integration.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Class schedule management with room allocation.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Substitute teacher arrangements.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Faculty Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Teacher profile management with qualifications tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Workload distribution and leave management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Performance evaluation system.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Examination System</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Exam scheduling and seat allocation.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Gradebook management with GPA calculation.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Digital mark sheets and transcripts.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Malpractice tracking and reporting.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Parent & Student Portals</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Real-time academic progress tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Attendance and grade monitoring.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Fee payment and receipt access.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Notification system.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary small-heading">Department & Resource Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Centralized department administration.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Laboratory and equipment inventory.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Library management system integration.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Cloud Backup & Data Security</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automatic data backup and synchronization.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Role-based access control (Admin, Faculty, Students, Parents).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Complete audit trails for all system activities.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Academic Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Digital course and curriculum planning.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Subject allocation and credit system management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Elective selection and change requests.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Digital Learning Integration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>LMS (Learning Management System) connectivity.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Online assignment submission and grading.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Virtual classroom integration.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Compliance & Accreditation</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>UGC and AICTE compliance reporting.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>NAAC accreditation documentation support.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Audit-ready record keeping.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Reports & Analytics</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Generate reports for:</p>
+          </li>
+          <li>Student performance</li>
+          <li>Attendance trends</li>
+          <li>Faculty workload</li>
+          <li>Financial operations</li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Custom report builder with export options (PDF/Excel).</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--product-benefits">
+  <div class="container center-text">
+    <h2 class="heading-tertiary center-text">Built for Education. Trusted by Institutions.</h2>
+  </div>
+
+  <div class="container benefit-details">
+    <p>CMS helps you:</p>
+    <li>Reduce administrative workload by up to 65%.</li>
+    <li>Improve institutional efficiency by 50%.</li>
+    <li>Enhance student satisfaction and engagement.</li>
+    <li>Ensure regulatory compliance and accreditation readiness.</li>
+    <li>Secure, cloud-based infrastructure with 99.9% uptime.</li>
+  </div>
+</section>
+
+<section class="section--product-connect">
+  <div class="container center-text">
+    <span class="subheading">Get Started Today</span>
+
+    <h1 class="heading-tertiary">Ready to modernize your institution with CMS?</h1>
+  </div>
+
+  <div class="product-contact">
+    <div>
+      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
+      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="last-p center-text">
+    <p>Transforming education through technology - one institution at a time.</p>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

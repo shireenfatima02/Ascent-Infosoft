@@ -1,0 +1,125 @@
+.section--product-hero {
+  padding: 7.2rem;
+}
+
+.section--product-hero img {
+  width: 10rem;
+  margin-bottom: 1.8rem;
+}
+
+.product-tagline {
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.section--product-features {
+  padding: 7.2rem;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1.8rem;
+  padding: 4.8rem;
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -30px;
+  width: 8rem;
+  height: 8rem;
+  background: url("/static/images/icons/tick-1.png") center/cover no-repeat;
+  transform: rotate(-15deg);
+}
+
+.heading-tertiary {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+.small-heading {
+  font-size: 2.5rem;
+}
+
+.feature-details {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.feature-details li {
+  list-style: none;
+  margin: 0 0 1.2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.ioicon {
+  width: 3rem;
+  height: 3rem;
+  color: darkmagenta;
+}
+
+.feature-details p {
+  margin-top: 0.2rem;
+}
+
+.section--product-benefits {
+  background-color: #f3f8ff;
+  padding: 7.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section--product-benefits h2 {
+  font-style: italic;
+}
+
+.benefit-details p {
+  font-size: 2.4rem;
+  margin-top: 4.8rem;
+}
+
+.benefit-details li {
+  font-size: 1.8rem;
+  margin: 1.2rem 0 0 2.4rem;
+  /* text-transform: uppercase; */
+}
+
+.section--product-connect {
+  padding: 9.6rem;
+}
+
+.flexbox {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.8rem;
+  justify-content: space-around;
+}
+
+.subheading {
+  color: inherit;
+  font-size: 1.6rem;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  display: block;
+}
+
+.product-contact div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3.2rem;
+}
+
+.last-p {
+  margin-top: 4.8rem;
+  font-size: 2.4rem;
+}

@@ -24,6 +24,31 @@ def products():
     return render_template('products.html')
 
 
+@app.route('/products/hms')
+def hms():
+    return render_template('products/hms.html')
+
+
+@app.route('/products/cms')
+def cms():
+    return render_template('products/cms.html')
+
+
+@app.route('/products/crm')
+def crm():
+    return render_template('products/crm.html')
+
+
+@app.route('/products/lms')
+def lms():
+    return render_template('products/lms.html')
+
+
+@app.route('/products/sm')
+def sm():
+    return render_template('products/sm.html')
+
+
 @app.route('/portfolio')
 def portfolio():
     return render_template('portfolio.html')

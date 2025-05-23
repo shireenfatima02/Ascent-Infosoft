@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section--product-hero">
+  <div class="product-hero center-text">
+    <h1 class="heading-primary">Store Manager</h1>
+
+    <h2 class="heading-primary">
+      A Complete Retail Management Solution
+    </h2>
+
+    <p class="product-tagline">Seamless Operations. Smarter Inventory. Superior Sales Performance.</p>
+
+    <p class="hero-description center-text">
+      SmartStore Manager is an all-in-one retail management system designed to automate 
+      store operations, optimize inventory, and enhance customer experiences. From 
+      point-of-sale to back-office analytics, our platform gives retailers complete 
+      control over their business.
+    </p>
+  </div>
+</section>
+
+<section class="section--product-features">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Key Features & Capabilities</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Point of Sale (POS) System</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Lightning-fast checkout (online/offline mode).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Barcode/QR code scanning.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Multiple payment options (cash, card, mobile wallets).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Receipt customization with branding.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Inventory Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Real-time stock tracking across locations.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automated low-stock alerts.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Batch/Lot number tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Expiry date management.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Customer Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Customer profiles with purchase history.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Loyalty program integration.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Membership and discount management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>SMS/email receipts.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Sales & Analytics</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Hourly/daily/weekly sales reports.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Top-selling items analysis.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Employee sales performance.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Profit margin calculations.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Omnichannel Integration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>E-commerce platform synchronization.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Marketplace connections (Amazon, eBay, etc.).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Click-and-collect functionality.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Unified customer data.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Mobile Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Remote inventory checks.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Sales monitoring from anywhere.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Approval workflows for managers.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Mobile receipt printing.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Accounting & Finance</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automatic sales-to-ledger posting.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Expense tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Tax calculation and reporting.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Vendor payment management.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Employee Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Shift scheduling.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Sales commission tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Role-based permissions.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Performance analytics.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Security & Compliance</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>User authentication (PIN/biometric).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Audit trails for all transactions.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Data encryption.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>GDPR-ready.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Hardware Integration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Barcode scanners.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Cash drawers.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Customer displays.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Weighing scales.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>
+
+<section class="section--product-benefits">
+  <div class="container center-text">
+    <h2 class="heading-tertiary center-text">Trusted by Retailers Worldwide</h2>
+  </div>
+
+  <div class="container benefit-details">
+    <p>Store Manager helps you:</p>
+    <li>30% faster checkout with our optimized POS.</li>
+    <li>Reduce inventory costs by 25% with smart tracking.</li>
+    <li>Increase repeat sales through customer insights.</li>
+    <li>Eliminate stockouts with automated replenishment.</li>
+    <li>Grow revenue with data-driven decisions.</li>
+    <li>Improve checkout speed by 40%.</li>
+  </div>
+</section>
+
+<section class="section--product-connect">
+  <div class="container center-text">
+    <span class="subheading">Get Started Today</span>
+
+    <h1 class="heading-tertiary">..................</h1>
+  </div>
+
+  <div class="product-contact">
+    <div>
+      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
+      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="last-p center-text">
+    <p>Transform your retail business today!</p>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section--product-hero">
+  <div class="product-hero center-text">
+    <h1 class="heading-primary">LMS</h1>
+
+    <h2 class="heading-primary">
+      An Intelligent Leave Management System
+    </h2>
+
+    <p class="product-tagline">Simplified Approvals. Automated Tracking. Effortless Workforce Management.</p>
+
+    <p class="hero-description center-text">
+      SmartLeave LMS is a comprehensive leave management solution designed to automate 
+      time-off requests, streamline approvals, and maintain accurate attendance records. 
+      From small businesses to large enterprises, our system eliminates paperwork while 
+      ensuring compliance with company policies and labor regulations.
+    </p>
+  </div>
+</section>
+
+<section class="section--product-features">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Key Features & Capabilities</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Leave Request & Approval</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Multi-level approval workflows (Manager/HR/Department Head).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Employee self-service portal for leave applications.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Real-time status notifications.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Mobile submission and approvals.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Attendance Integration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automatic synchronization with biometric/RFID systems.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Holiday calendar management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Shift pattern recognition.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Overtime calculation.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Policy Configuration</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Customizable leave types (Paid, Sick, Maternity, etc.).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Accrual rules based on tenure/department/role.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Carry-forward and encashment settings.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Country-specific labor law compliance.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Document Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Digital attachment of medical certificates.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Automated approval documentation.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Audit-ready record keeping.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Custom form builder.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Employee Self-Service</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Personal leave balance dashboard.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Team availability calendar.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Historical leave records.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>One-click cancellation/modification.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Manager Portal</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Department leave calendar view.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Coverage planning tools.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Bulk approval/rejection.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Headcount forecasting.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+        
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Analytics and Reporting</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Leave trend analysis (department/individual).</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Absenteeism rate tracking.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Custom report generation.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Export to payroll systems.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Integration Ecosystem</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>HRMS/HRIS system connectivity.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Payroll software integration.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Slack/Microsoft Teams notifications.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>API for custom solutions.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Security and Compliance</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Role-based access control.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>GDPR-ready data protection.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Complete audit trails.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>SOC 2 Type II certified.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Global Workforce Support</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Multi-country policy management.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Multi-language interface.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Regional holiday templates.</p>
+          </li>
+          <li>
+            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
+            <p>Timezone-aware processing.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--product-benefits">
+  <div class="container center-text">
+    <h2 class="heading-tertiary center-text">Trusted by Leading Organizations</h2>
+  </div>
+
+  <div class="container benefit-details">
+    <p>LMS helps you:</p>
+    <li>Reduce administrative workload by 75%.</li>
+    <li>Eliminate payroll errors from manual leave calculations.</li>
+    <li>Improve workforce planning with real-time visibility.</li>
+    <li>Enhance employee satisfaction with transparent processes.</li>
+    <li>Ensure 100% compliance with labor regulations.</li>
+    <li>Reduce leave processing time from 3 days to 3 minutes.</li>
+  </div>
+</section>
+
+<section class="section--product-connect">
+  <div class="container center-text">
+    <span class="subheading">Get Started Today</span>
+
+    <h1 class="heading-tertiary">..................</h1>
+  </div>
+
+  <div class="product-contact">
+    <div>
+      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
+      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="last-p center-text">
+    <p>Transform your leave management today!</p>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

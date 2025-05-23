@@ -4,10 +4,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
-  padding: 0;
-}
-
 .contact {
   grid-template-columns: 1fr;
   align-items: start;
