@@ -2,15 +2,113 @@
 
 
 {% block css %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
 
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_about_contact.css') }}">
+
+  <script src="{{ url_for('static', filename='js/contact-us.js') }}"></script>
+
 {% endblock %}
 
 
 {% block content %}
 
 <section class="section--contact-heading">
+  <header id="hero-header" class="header">
+    <a href="#">
+      <img
+        class="logo"
+        src="{{ url_for('static', filename='images/ascent_logo.png') }}"
+        alt="Ascent Infosoft, Software Development Company, Aurangabad, CSN"
+      />
+    </a>
+
+    <!-- Hamburger -->
+    <ion-icon class="menu-icon" name="menu-outline" id="hamburger"></ion-icon>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+      <div class="mobile-nav-header">
+        <img class="logo" src="{{ url_for('static', filename='images/ascent_logo.png') }}" alt="Ascent Infosoft" />
+        <button class="icon-btn close-btn" id="close-btn">
+          <ion-icon class="menu-icon" name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-list">
+        <li class="mobile-item"><a href="{{ url_for('index') }}">Home</a></li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('services') }}">Services</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('software_development') }}">Software Development</a></li>
+            <li><a href="{{ url_for('web_development') }}">Web Development</a></li>
+            <li><a href="{{ url_for('web_designing') }}">Web Designing</a></li>
+            <li><a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a></li>
+            <li><a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a></li>
+            <li><a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a></li>
+          </ul>
+        </li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('products') }}">Products</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('hms') }}">Hospital Management System</a></li>
+            <li><a href="{{ url_for('cms') }}">College Management System</a></li>
+            <li><a href="{{ url_for('crm') }}">Customer Relationship Management</a></li>
+            <li><a href="{{ url_for('lms') }}">Leave Management System</a></li>
+          </ul>
+        </li>
+        
+        <li class="mobile-item"><a href="{{ url_for('about') }}">About Us</a></li>
+        <li class="mobile-item"><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li>
+          <a href="{{ url_for('index') }}" class="main-nav-link">Home</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('software_development') }}">Software Development</a>
+            <a href="{{ url_for('web_development') }}">Web Development</a>
+            <a href="{{ url_for('web_designing') }}">Web Designing</a>
+            <a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a>
+            <a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a>
+            <a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a>
+          </div>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('hms') }}">Hospital Management System</a>
+            <a href="{{ url_for('cms') }}">College Management System</a>
+            <a href="{{ url_for('crm') }}">Customer Relationship Management</a>
+            <a href="{{ url_for('lms') }}">Leave Management System</a>
+            <!-- <a href="{{ url_for('sm') }}">Store Management System</a> -->
+          </div>
+        </li>
+        
+        <!-- <li>
+          <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+        </li> -->
+        <li>
+          <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
+        </li>
+        <li>
+          <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
   <div class="container">
     <h1 class="contact--heading">Contact Us</h1>
     
@@ -27,9 +125,8 @@
       <div class="contact-text-box">
         <h2 class="heading-secondary center-text">Connect with us and watch your project take off!</h2>
 
-        <form class="contact-form" name="submit-request">
+        <form id="contact-form" class="contact-form" method="POST" action="/contact-us/">
           <div>
-            <!-- <label for="full-name">Name</label> -->
             <input
               id="full-name"
               type="text"
@@ -40,7 +137,6 @@
           </div>
 
           <div>
-            <!-- <label for="email">Email</label> -->
             <input
               id="email"
               type="email"
@@ -51,7 +147,6 @@
           </div>
 
           <div>
-            <!-- <label for="mobile-number">Mobile Number</label> -->
             <input
               id="mobile-number"
               type="text"
@@ -62,40 +157,60 @@
           </div>
 
           <div>
-            <!-- <label for="mobile-number">Mobile Number</label> -->
             <select id="country" name="country" required>
               <option value="" disabled selected>Select Country</option>
             </select>
           </div>
 
           <div>
-            <!-- <label for="mobile-number">Mobile Number</label> -->
             <select id="state" name="state" required disabled>
               <option value="" disabled selected>Select State</option>
             </select>
           </div>
 
           <div>
-            <!-- <label for="mobile-number">Mobile Number</label> -->
             <select id="city" name="city" required disabled>
               <option value="" disabled selected>Select City</option>
             </select>
           </div>
 
           <div>
-            <!-- <label for="message">Message</label> -->
             <textarea
               id="message"
               type="text"
               placeholder="Message"
               name="message"
-            >
-            </textarea>
+            ></textarea>
+          </div>
+          
+          <div class="submit-btn">
+            <button type="submit" class="btn btn--form">Submit Request</button>
           </div>
         </form>
+
+        <div id="processing-message" class="notification-message processing">
+          <p>Processing your request...</p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
         
-        <div class="submit-btn">
-          <button class="btn btn--form">Submit Request</button>
+        <div id="success-message" class="notification-message success">
+          <p>
+            Your request has been submitted successfully!
+            <br>
+            We'll get back to you soon!
+          </p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        
+        <div id="error-message" class="notification-message error">
+          <p>Error submitting form!</p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -118,9 +233,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 
 {% endblock %}

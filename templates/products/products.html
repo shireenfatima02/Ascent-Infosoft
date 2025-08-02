@@ -1,0 +1,358 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section--services">
+  <header id="hero-header" class="header">
+    <a href="#">
+      <img
+        class="logo"
+        src="{{ url_for('static', filename='images/ascent_logo.png') }}"
+        alt="Ascent Infosoft, Software Development Company, Aurangabad, CSN"
+      />
+    </a>
+
+    <!-- Hamburger -->
+    <ion-icon class="menu-icon" name="menu-outline" id="hamburger"></ion-icon>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+      <div class="mobile-nav-header">
+        <img class="logo" src="{{ url_for('static', filename='images/ascent_logo.png') }}" alt="Ascent Infosoft" />
+        <button class="icon-btn close-btn" id="close-btn">
+          <ion-icon class="menu-icon" name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-nav-list">
+        <li class="mobile-item"><a href="{{ url_for('index') }}">Home</a></li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('services') }}">Services</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('software_development') }}">Software Development</a></li>
+            <li><a href="{{ url_for('web_development') }}">Web Development</a></li>
+            <li><a href="{{ url_for('web_designing') }}">Web Designing</a></li>
+            <li><a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a></li>
+            <li><a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a></li>
+            <li><a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a></li>
+          </ul>
+        </li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('products') }}">Products</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('hms') }}">Hospital Management System</a></li>
+            <li><a href="{{ url_for('cms') }}">College Management System</a></li>
+            <li><a href="{{ url_for('crm') }}">Customer Relationship Management</a></li>
+            <li><a href="{{ url_for('lms') }}">Leave Management System</a></li>
+          </ul>
+        </li>
+        
+        <li class="mobile-item"><a href="{{ url_for('about') }}">About Us</a></li>
+        <li class="mobile-item"><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li>
+          <a href="{{ url_for('index') }}" class="main-nav-link">Home</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('software_development') }}">Software Development</a>
+            <a href="{{ url_for('web_development') }}">Web Development</a>
+            <a href="{{ url_for('web_designing') }}">Web Designing</a>
+            <a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a>
+            <a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a>
+            <a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a>
+          </div>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('hms') }}">Hospital Management System</a>
+            <a href="{{ url_for('cms') }}">College Management System</a>
+            <a href="{{ url_for('crm') }}">Customer Relationship Management</a>
+            <a href="{{ url_for('lms') }}">Leave Management System</a>
+            <!-- <a href="{{ url_for('sm') }}">Store Management System</a> -->
+          </div>
+        </li>
+        
+        <!-- <li>
+          <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+        </li> -->
+        <li>
+          <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
+        </li>
+        <li>
+          <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="service-hero">
+    <h1 class="heading-primary">
+      Ascent Infosoft Solutions
+      <br>
+      <span>Powering Your Success with Integrated Business Software.</span>
+    </h1>
+  </div>
+
+  <div>
+    <p class="hero-description">
+      At Ascent Infosoft, we build enterprise-grade software solutions to automate
+      operations, streamline workflows, and drive growth across industries. Our comprehensive
+      <br>
+      product suite is designed to meet your unique business needs with
+      <br>
+      reliability, innovation, and exceptional support.
+    </p>
+  </div>
+</section>
+
+<section class="section--products-portfolio">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Our Product Portfolio</h2>
+  </div>
+
+  <div class="container">
+    <!-- HMS -->
+    <div class="product">
+      <div class="product-content">
+        <p class="product-heading">Homoeopathic Hospital Management System</p>
+
+        <p class="product-description">
+          Our comprehensive HMS platform digitizes the entire patient care journey,
+          from initial registration through final discharge. The system integrates
+          outpatient and inpatient management with pharmacy operations and diagnostic
+          workflows while maintaining strict compliance with healthcare standards
+          including CCRH, NABH, and WHO ICD-11 requirements.
+        </p>
+
+        <div class="product-links">
+          <a href="{{ url_for('hms') }}">Learn more!</a>
+          <a href="{{ url_for('contact') }}">Request a Demo</a>
+        </div>
+      </div>
+
+      <img
+        class="product-img"
+        src="{{ url_for('static', filename='images/products/hms.jpg') }}"
+        alt="Homeopathic hospital management system, software for homeopathic hospitals"
+      />
+    </div>
+
+    <!-- CMS -->
+    <div class="product">
+      <img
+        class="product-img"
+        src="{{ url_for('static', filename='images/products/cms.jpg') }}"
+        alt="College management system, cms, software for schools and colleges"
+      />
+
+      <div class="product-content">
+        <p class="product-heading">College Management System</p>
+
+        <p class="product-description">
+          The CMS solution revolutionizes educational administration by automating student
+          lifecycle management, from digital admissions to alumni relations. Our platform
+          supports smart classroom coordination, automated examination systems, and provides
+          tools to maintain compliance with UGC, AICTE, and NAAC accreditation standards.
+        </p>
+
+        <div class="product-links">
+          <a href="{{ url_for('cms') }}">Learn more!</a>
+          <a href="{{ url_for('contact') }}">Request a Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRM -->
+    <div class="product">
+      <div class="product-content">
+        <p class="product-heading">Customer Relationship Management Software</p>
+
+        <p class="product-description">
+          This intelligent CRM platform optimizes customer interactions across the entire
+          sales funnel. By unifying customer data, automating sales pipelines, and delivering
+          AI-powered business insights, our solution helps organizations build stronger
+          relationships while identifying new growth opportunities.
+        </p>
+
+        <div class="product-links">
+          <a href="{{ url_for('crm') }}">Learn more!</a>
+          <a href="{{ url_for('contact') }}">Request a Demo</a>
+        </div>
+      </div>
+
+      <img
+        class="product-img"
+        src="{{ url_for('static', filename='images/products/crm.jpg') }}"
+        alt="CRM software, customer relationship management software"
+      />
+    </div>
+
+    <!-- LMS -->
+    <div class="product">
+      <img
+        class="product-img"
+        src="{{ url_for('static', filename='images/products/lms.jpg') }}"
+        alt="Leave management system, leave management software"
+      />
+
+      <div class="product-content">
+        <p class="product-heading">Leave Management System</p>
+
+        <p class="product-description">
+          Our LMS transforms workforce administration through automated leave request
+          workflows and policy-compliant tracking. The system provides real-time visibility
+          into staff availability while ensuring adherence to organizational policies and
+          labor regulations across multiple locations.
+        </p>
+
+        <div class="product-links">
+          <a href="{{ url_for('lms') }}">Learn more!</a>
+          <a href="{{ url_for('contact') }}">Request a Demo</a>
+        </div>
+      </div>
+    </div>    
+  </div>
+
+  <div class="container">
+    <div class="more-prodcts center-text">
+      <p class="product-heading">
+        ... And many more custom-built for clients' specific needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--products-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Organizations Choose Us</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/industry-first-approach.png') }}"
+        alt="Industry first approach"
+      />
+
+      <p class="benefit center-text">Industry-First Approach</p>
+
+      <p class="service-description">
+        Each solution is purpose-built to address the unique challenges and workflows of
+        your specific sector, whether healthcare, education, or corporate environments.
+      </p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/future-technology.png') }}"
+        alt="Advance technologies"
+      />
+
+      <p class="benefit center-text">Future Ready Technology</p>
+
+      <p class="service-description">
+        Our platforms incorporate cloud computing, artificial intelligence, and mobile
+        accessibility to ensure your operations remain agile and future-ready.
+      </p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/seamless-integration.png') }}"
+        alt="Seamless integration"
+      />
+
+      <p class="benefit center-text">Seamless Integration</p>
+
+      <p class="service-description">
+        All systems are seamlessly designed for simple, easy integration with your existing software
+        infrastructure, minimizing disruption during deployment.
+      </p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/proven-results.png') }}"
+        alt="Proven results"
+      />
+
+      <p class="benefit center-text">Proven Results</p>
+
+      <p class="service-description">
+        Trusted by organizations globally, our solutions deliver measurable improvements
+        in efficiency, compliance, and profitability.
+      </p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/support.png') }}"
+        alt="Dedicated support"
+      />
+
+      <p class="benefit center-text">Dedicated Support</p>
+
+      <p class="service-description">
+        Our dedicated customer success teams provide 24/7 assistance to ensure optimal 
+        system performance and user satisfaction.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--products-custom-sd">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Looking for a custom solution?</h2>
+    
+    <p class="custom-sd-content">For organizations with unique requirements, our custom software development team delivers tailored solutions designed specifically for your operational needs.</p>
+
+    <a href="{{ url_for('contact') }}">Discuss Your Custom Project <span>&rightarrow;</span></a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

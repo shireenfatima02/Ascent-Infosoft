@@ -2,10 +2,9 @@
 
 
 {% block css %}
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
+
 {% endblock %}
 
 
@@ -13,6 +12,11 @@
 
 <section class="section--product-hero">
   <div class="product-hero center-text">
+    <img
+      src="{{ url_for('static', filename='images/products/lms-icon.png') }}"
+      alt="HomoeoSoft, Hospital Management System, Ascent Infosoft"
+    />
+
     <h1 class="heading-primary">LMS</h1>
 
     <h2 class="heading-primary">
@@ -42,22 +46,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Multi-level approval workflows (Manager/HR/Department Head).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Employee self-service portal for leave applications.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Real-time status notifications.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Mobile submission and approvals.</p>
-          </li>
+          <li>Multi-level approval workflows (Manager / HR / Department Head).</li>
+          <li>Employee self-service portal for leave applications.</li>
+          <li>Real-time status notifications.</li>
+          <li>Mobile submission and approvals.</li>
         </ul>
       </div>
     </div>
@@ -68,22 +60,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automatic synchronization with biometric/RFID systems.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Holiday calendar management.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Shift pattern recognition.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Overtime calculation.</p>
-          </li>
+          <li>Automatic synchronization with biometric/RFID systems.</li>
+          <li>Holiday calendar management.</li>
+          <li>Shift pattern recognition.</li>
+          <li>Overtime calculation.</li>
         </ul>
       </div>
     </div>
@@ -94,22 +74,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Customizable leave types (Paid, Sick, Maternity, etc.).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Accrual rules based on tenure/department/role.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Carry-forward and encashment settings.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Country-specific labor law compliance.</p>
-          </li>
+          <li>Customizable leave types (Paid, Sick, Maternity, etc.).</li>
+          <li>Accrual rules based on tenure/department/role.</li>
+          <li>Carry-forward and encashment settings.</li>
+          <li>Country-specific labor law compliance.</li>
         </ul>
       </div>
     </div>
@@ -120,22 +88,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Digital attachment of medical certificates.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automated approval documentation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Audit-ready record keeping.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Custom form builder.</p>
-          </li>
+          <li>Digital attachment of medical certificates.</li>
+          <li>Automated approval documentation.</li>
+          <li>Audit-ready record keeping.</li>
+          <li>Custom form builder.</li>
         </ul>
       </div>
     </div>
@@ -146,22 +102,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Personal leave balance dashboard.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Team availability calendar.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Historical leave records.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>One-click cancellation/modification.</p>
-          </li>
+          <li>Personal leave balance dashboard.</li>
+          <li>Team availability calendar.</li>
+          <li>Historical leave records.</li>
+          <li>One-click cancellation/modification.</li>
         </ul>
       </div>
     </div>
@@ -172,22 +116,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Department leave calendar view.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Coverage planning tools.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Bulk approval/rejection.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Headcount forecasting.</p>
-          </li>
+          <li>Department leave calendar view.</li>
+          <li>Coverage planning tools.</li>
+          <li>Bulk approval/rejection.</li>
+          <li>Headcount forecasting.</li>
         </ul>
       </div>
     </div>
@@ -198,22 +130,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Leave trend analysis (department/individual).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Absenteeism rate tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Custom report generation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Export to payroll systems.</p>
-          </li>
+          <li>Leave trend analysis (department/individual).</li>
+          <li>Absenteeism rate tracking.</li>
+          <li>Custom report generation.</li>
+          <li>Export to payroll systems.</li>
         </ul>
       </div>
     </div>
@@ -224,22 +144,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>HRMS/HRIS system connectivity.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Payroll software integration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Slack/Microsoft Teams notifications.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>API for custom solutions.</p>
-          </li>
+          <li>HRMS/HRIS system connectivity.</li>
+          <li>Payroll software integration.</li>
+          <li>Slack/Microsoft Teams notifications.</li>
+          <li>API for custom solutions.</li>
         </ul>
       </div>
     </div>
@@ -250,22 +158,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Role-based access control.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>GDPR-ready data protection.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Complete audit trails.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>SOC 2 Type II certified.</p>
-          </li>
+          <li>Role-based access control.</li>
+          <li>GDPR-ready data protection.</li>
+          <li>Complete audit trails.</li>
+          <li>SOC 2 Type II certified.</li>
         </ul>
       </div>
     </div>
@@ -276,22 +172,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Multi-country policy management.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Multi-language interface.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Regional holiday templates.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Timezone-aware processing.</p>
-          </li>
+          <li>Multi-country policy management.</li>
+          <li>Multi-language interface.</li>
+          <li>Regional holiday templates.</li>
+          <li>Timezone-aware processing.</li>
         </ul>
       </div>
     </div>
@@ -323,13 +207,13 @@
 
   <div class="product-contact">
     <div>
-      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
       <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
       <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
     </div>
   </div>
 
-  <div class="last-p center-text">
+  <div class="connect-tagline center-text">
     <p>Transform your leave management today!</p>
   </div>
 </section>
@@ -350,9 +234,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>

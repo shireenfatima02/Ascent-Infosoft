@@ -1,0 +1,383 @@
+/* -------------------
+    BELOW 1344px (SMALLER DESKTOPS)
+   ------------------- */
+
+/* 84em = 1344px */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/* 79em = 1264px */
+@media (max-width: 79em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .hero {
+    max-width: 126rem;
+  }
+}
+
+/* -------------------
+    BELOW 1200px (LANDSCAPE TABLETS) 56.25
+   ------------------- */
+
+/* 75em = 1200px */
+@media (max-width: 75em) {
+  .hero {
+    max-width: 120rem;
+  }
+}
+
+/* 72.5em = 1160px */
+@media (max-width: 72.5em) {
+  html {
+    font-size: 53.12%;
+  }
+
+  .container {
+    max-width: 115rem;
+  }
+}
+
+/* 66em = 1056px */
+@media (max-width: 66em) {
+  html {
+    font-size: 51.87%;
+  }
+
+  .heading-primary {
+    font-size: 3.2rem;
+  }
+
+  .header {
+    padding: 0 3.6rem;
+  }
+
+  .hero {
+    max-width: 115rem;
+    padding-top: 2.4rem;
+  }
+
+  .hero-description {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    max-width: 108rem;
+  }
+
+  .section-contact-us {
+    padding: 9.6rem 0;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .footer > .container {
+    max-width: 110rem;
+  }
+}
+
+/* -------------------
+    BELOW 976px (TABLETS)
+   ------------------- */
+
+/* 61em = 976px */
+@media (max-width: 61em) {
+  html {
+    font-size: 50%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .header {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .logo {
+    height: 6rem;
+  }
+
+  .hero {
+    max-width: 115rem;
+    padding: 7.2rem;
+
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box,
+  .contact-img-box {
+    text-align: center;
+  }
+
+  .heading-primary {
+    font-size: 5.6rem;
+  }
+
+  .hero-description {
+    font-size: 2.2rem;
+  }
+
+  .hero-img,
+  .about-img {
+    width: 60%;
+  }
+
+  .container {
+    max-width: 100rem;
+  }
+
+  .heading-secondary {
+    font-size: 4.8rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    gap: 4.2rem;
+  }
+
+  .services-container {
+    max-width: 80rem;
+  }
+
+  .service-img {
+    margin-bottom: 1.2rem;
+  }
+
+  .service-heading {
+    font-size: 2.6rem;
+  }
+
+  .service-description {
+    font-size: 2rem;
+  }
+
+  .section-about h2 {
+    margin-bottom: 2.2rem;
+  }
+
+  .about-content,
+  .about-content--bp {
+    font-size: 2rem;
+  }
+
+  .about-img {
+    width: 60%;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .section-who-we-serve {
+    padding: 9.6rem;
+  }
+
+  .section-who-we-serve h2 {
+    font-size: 4.2rem;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact {
+    max-width: 70rem;
+
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+    justify-self: center;
+  }
+
+  .contact-img {
+    width: 50%;
+  }
+
+  .footer > .container {
+    max-width: 85rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .contact-col {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .footer-heading {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* -------------------
+    BELOW 704px (SMALLER TABLETS)
+   ------------------- */
+
+/* 44em = 704px */
+@media (max-width: 44em) {
+  .mobile-nav-overlay {
+    width: 100%;
+  }
+
+  .hero {
+    max-width: 80rem;
+  }
+
+  .heading-primary {
+    font-size: 4.2rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+  }
+
+  .container {
+    max-width: 60rem;
+  }
+
+  .heading-secondary {
+    font-size: 4.2rem;
+  }
+
+  .section-who-we-serve {
+    padding-bottom: 4.2rem;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .industries {
+    width: 80%;
+  }
+
+  .industry-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer > .container {
+    max-width: 60rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .logo-col {
+    grid-column: span 2;
+  }
+
+  .contact-col {
+    grid-row: 3;
+    grid-column: span 2;
+  }
+
+  .footer-heading {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/* -------------------
+    BELOW 528px (PHONES)
+   ------------------- */
+
+/* 33em = 528px */
+@media (max-width: 33em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* 29.5em = 472px */
+@media (max-width: 29.5em) {
+  html {
+    font-size: 40%;
+  }
+
+  .header {
+    padding: 5.2rem 3.6rem;
+  }
+
+  .logo {
+    height: 6.6rem;
+  }
+
+  .hero-description,
+  .service-description,
+  .about-content,
+  .about-content--bp {
+    font-size: 2.2rem;
+  }
+
+  .industry-name,
+  .footer-company-description {
+    font-size: 2rem;
+  }
+
+  .footer-heading {
+    font-size: 2.2rem;
+  }
+
+  .footer-link:link {
+    font-size: 2rem;
+  }
+
+  .mobile-item {
+    font-size: 2.8rem;
+  }
+}
+
+/* 26em = 416px */
+@media (max-width: 26em) {
+  html {
+    font-size: 35%;
+  }
+
+  .header {
+    padding: 5.6rem 3.2rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2.2rem;
+  }
+
+  .hero-description,
+  .service-description,
+  .about-content,
+  .about-content--bp {
+    font-size: 2.4rem;
+  }
+
+  .industry-name,
+  .footer-company-description {
+    font-size: 2.4rem;
+  }
+
+  .footer-heading {
+    font-size: 2.4rem;
+  }
+
+  .footer-link:link {
+    font-size: 2.2rem;
+  }
+
+  .notification-message p {
+    font-size: 2rem;
+  }
+}

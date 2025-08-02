@@ -1,0 +1,116 @@
+/* 66em = 1056px */
+@media (max-width: 66em) {
+  .section-contact-us .container {
+    max-width: 100rem;
+  }
+}
+
+/* -------------------
+    BELOW 976px (TABLETS)
+   ------------------- */
+
+/* 61em = 976px */
+@media (max-width: 61em) {
+  .contact {
+    max-width: 120rem;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-btn {
+    grid-column: span 1;
+  }
+}
+
+/* 59em = 944px */
+@media (max-width: 59em) {
+  .section--about-heading .container {
+    padding-left: 0;
+  }
+}
+
+/* 57em = 912px */
+@media (max-width: 57em) {
+  .contact {
+    max-width: 90rem;
+  }
+
+  .container {
+    max-width: 90rem;
+  }
+}
+
+/* 51em = 816px */
+@media (max-width: 51em) {
+  .contact {
+    max-width: 65rem;
+  }
+
+  .section--about-heading .container {
+    margin-left: 0;
+  }
+
+  .container {
+    max-width: 75rem;
+  }
+}
+
+/* -------------------
+    BELOW 704px (SMALLER TABLETS)
+   ------------------- */
+
+/* 44em = 704px */
+@media (max-width: 44em) {
+  .contact {
+    max-width: 55rem;
+  }
+
+  .section-contact-us {
+    padding: 5.4rem 0;
+  }
+
+  .about--hero-content .heading-secondary {
+    font-size: 4.2rem;
+  }
+
+  .contact-text-box .heading-secondary {
+    font-size: 3.2rem;
+  }
+
+  .container {
+    max-width: 65rem;
+  }
+}
+
+/* 38em = 608px */
+@media (max-width: 38em) {
+  .section--about-heading,
+  .section--contact-heading {
+    padding-left: 7.2rem;
+  }
+
+  .about--hero-content .heading-secondary {
+    font-size: 4.8rem;
+  }
+
+  .container {
+    max-width: 55rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.8rem;
+  }
+}
+
+/* -------------------
+    BELOW 528px (PHONES)
+   ------------------- */
+
+/* 29.5em = 472px */
+@media (max-width: 29.5em) {
+  .container {
+    max-width: 60rem;
+  }
+}

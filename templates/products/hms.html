@@ -2,10 +2,9 @@
 
 
 {% block css %}
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
+
 {% endblock %}
 
 
@@ -13,12 +12,15 @@
 
 <section class="section--product-hero">
   <div class="product-hero center-text">
-    <img src="{{ url_for('static', filename='images/products/Hospital Icon.ico') }}" alt="HomoeoSoft, Hospital Management System, Ascent Infosoft" />
+    <img
+      src="{{ url_for('static', filename='images/products/homoeosoft-icon.ico') }}"
+      alt="HomoeoSoft, Hospital Management System, Ascent Infosoft"
+    />
     
     <h1 class="heading-primary">HomoeoSoft</h1>
 
     <h2 class="heading-primary">
-      An All-in-One Hospital Management System
+      An All-in-One Homoeopathic Hospital Management System
     </h2>
 
     <p class="product-tagline">Seamless Patient Care. Smarter Administration. Superior Outcomes.</p>
@@ -37,47 +39,28 @@
     <h2 class="heading-secondary">Key Features & Capabilities</h2>
   </div>
 
-  <div class="container grid grid--2-cols">
+  <div class="feature-cards container grid grid--2-cols">
     <div class="features">
       <div class="feature-heading">
         <h1 class="heading-tertiary">Centralized Patient Registration</h1>
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Register new patients and access returning patients with ease.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Maintain complete patient histories in a single, searchable database.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Unique ID generation for lifetime record tracking.</p>
-          </li>
+          <li>Register new patients and access returning patients with ease.</li>
+          <li>Maintain complete patient histories in a single, searchable database.</li>
+          <li>Unique ID generation for lifetime record tracking.</li>
         </ul>
       </div>
     </div>
-    
+
     <div class="features">
       <div class="feature-heading">
-        <h1 class="heading-tertiary">Out Patient (OPD) Management</h1>
+        <h1 class="heading-tertiary">Role-Based Access & Security</h1>
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Effortless OPD entries with real-time data sync.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Access and manage previous visit records, prescriptions, and history.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Digital OPD case papers accessible anytime.</p>
-          </li>
+          <li>Permissions based on roles (Doctor, Nurse, Receptionist, Admin, etc.).</li>
+          <li>Secure sensitive data and patient records from unauthorized access.</li>
         </ul>
       </div>
     </div>
@@ -88,14 +71,8 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Integrated pharmacy module for streamlined medicine issue.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automated dispensing logs linked with patient treatment records.</p>
-          </li>
+          <li>Integrated pharmacy module for streamlined medicine issue.</li>
+          <li>Automated dispensing logs linked with patient treatment records.</li>
         </ul>
       </div>
     </div>
@@ -106,14 +83,8 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Maintain and update departments, doctors, medicines, labs, and user roles.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Built-in analytics and automated reports for data-driven decision-making.</p>
-          </li>
+          <li>Maintain and update departments, doctors, medicines, labs, and user roles.</li>
+          <li>Built-in analytics and automated reports for data-driven decision-making.</li>
         </ul>
       </div>
     </div>
@@ -124,18 +95,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Prescribe pathological and radiological tests directly from the patient dashboard.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Attach, store, and view reports — accessible by both OPD and IPD departments.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Detailed investigation records maintained for each patient.</p>
-          </li>
+          <li>Prescribe pathological and radiological tests directly from the patient dashboard.</li>
+          <li>Attach, store, and view reports &ndash; accessible by both OPD and IPD departments.</li>
+          <li>Detailed investigation records maintained for each patient.</li>
         </ul>
       </div>
     </div>
@@ -146,21 +108,25 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Manage IPD admissions, discharge summaries, and case papers.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Daily rounds, observations, treatment plans, and investigations — all logged digitally.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Track bed occupancy, status, and patient progress in real time.</p>
-          </li>
+          <li>Manage IPD admissions, discharge summaries, and case papers.</li>
+          <li>Daily rounds, observations, treatment plans, and investigations &ndash; all logged digitally.</li>
+          <li>Track bed occupancy, status, and patient progress in real time.</li>
         </ul>
       </div>
-    </div>    
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Out Patient (OPD) Management</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>Effortless OPD entries with real-time data sync.</li>
+          <li>Digital OPD case papers accessible anytime.</li>
+          <li>Access and manage previous visit records, prescriptions, and history.</li>
+        </ul>
+      </div>
+    </div>
     
     <div class="features">
       <div class="feature-heading">
@@ -168,18 +134,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Built-in support for homeopathic case taking formats.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Structured as per CCRH and NABH guidelines.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Capture case data in a clinical, compliant, and standardized manner.</p>
-          </li>
+          <li>Built-in support for homeopathic case taking formats.</li>
+          <li>Structured as per CCRH and NABH guidelines.</li>
+          <li>Capture case data in a clinical, compliant, and standardized manner.</li>
         </ul>
       </div>
     </div>
@@ -190,14 +147,8 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Integrated WHO-specified ICD-11 encoding for accurate disease classification.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Facilitates global compliance and improved interoperability.</p>
-          </li>
+          <li>Integrated WHO-specified ICD-11 encoding for accurate disease classification.</li>
+          <li>Facilitates global compliance and improved interoperability.</li>
         </ul>
       </div>
     </div>
@@ -208,14 +159,8 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Diet chart logs, physiotherapy schedules, and yoga therapy records for OPD & IPD.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Easily assign treatments and monitor patient responses over time.</p>
-          </li>
+          <li>Diet chart logs, physiotherapy schedules, and yoga therapy records for OPD & IPD.</li>
+          <li>Easily assign treatments and monitor patient responses over time.</li>
         </ul>
       </div>
     </div>
@@ -226,55 +171,15 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Track fees for:</p>
-          </li>
-          <li>Patient registration, OPD/IPD visits, medicines, diagnostics</li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Secure billing module with discounts, refunds, and dues tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Generate invoices instantly and maintain transaction logs.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="features">
-      <div class="feature-heading">
-        <h1 class="heading-tertiary">Role-Based Access & Security</h1>
-      </div>
-      <div class="feature-details">
-        <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Permissions based on roles (Doctor, Nurse, Receptionist, Admin, etc.).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Secure sensitive data and patient records from unauthorized access.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="features">
-      <div class="feature-heading">
-        <h1 class="heading-tertiary">Case Correction & Editing</h1>
-      </div>
-      <div class="feature-details">
-        <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Modify case details in case of data entry errors.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Admin-supervised correction logs for accountability and transparency.</p>
-          </li>
+          <li>Track fees for:</li>
+          <div class="subdetails-group">
+            <li class="subdetail">Patient registration</li>
+            <li class="subdetail">OPD/IPD visits</li>
+            <li class="subdetail">Medicines</li>
+            <li class="subdetail">Diagnostics</li>
+          </div>
+          <li>Secure billing module with discounts, refunds, and dues tracking.</li>
+          <li>Generate invoices instantly and maintain transaction logs.</li>
         </ul>
       </div>
     </div>
@@ -285,22 +190,29 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Generate reports for:</p>
-          </li>
-          <li>Central Registration, OPD, IPD</li>
-          <li>Case Papers, Medicines, Investigations, IPD Occupancy</li>
-          <li>Fee collections and outstanding dues</li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Summary reports:</p>
-          </li>
-          <li>Day-wise, department-wise, gender-wise summary reports for both OPD and IPD</li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Export options in PDF/Excel formats.</p>
-          </li>
+          <li>Generate reports for:</li>
+          <div class="subdetails-group">
+            <li class="subdetail">Central Registration, OPD, IPD</li>
+            <li class="subdetail">Case Papers, Medicines, Investigations, IPD Occupancy</li>
+            <li class="subdetail">Fee collections and outstanding dues</li>
+          </div>
+          <li>Summary reports:</li>
+          <div class="subdetails-group">
+            <li class="subdetail">Day-wise, department-wise, gender-wise summary reports for both OPD and IPD</li>
+          </div>
+          <li>Export options in PDF/Excel formats.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature-heading">
+        <h1 class="heading-tertiary">Case Correction & Editing</h1>
+      </div>
+      <div class="feature-details">
+        <ul>
+          <li>Modify case details in case of data entry errors.</li>
+          <li>Admin-supervised correction logs for accountability and transparency.</li>
         </ul>
       </div>
     </div>
@@ -333,14 +245,14 @@
 
   <div class="product-contact">
     <div>
-      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
       <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
       <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
     </div>
   </div>
 
-  <div class="last-p center-text">
-    <p>Let's revolutionize healthcare — one system at a time.</p>
+  <div class="connect-tagline center-text">
+    <p>Let's revolutionize healthcare &ndash; one system at a time.</p>
   </div>
 </section>
 
@@ -360,9 +272,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>

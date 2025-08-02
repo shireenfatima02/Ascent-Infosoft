@@ -1,25 +1,20 @@
-body {
-  background-image: url(../images/about-us/bg_header.jpg);
-  background-size: 100% auto;
+.section--about-heading {
+  position: relative;
+  background-image: url(../images/about-us/bg_header1.jpg);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-}
-
-.section--about-hero {
-  padding: 9.6rem 0;
-  margin-left: 10.8rem;
-}
-
-.about--hero-container {
-  color: #333;
+  padding: 19.2rem 9.6rem 9.6rem 9.6rem;
 }
 
 .about--heading {
-  font-size: 5.2rem;
-  margin-left: 3.2rem;
+  color: #444;
+  font-size: 6.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .about--hero-content {
-  padding: 7.2rem 0;
+  padding: 9.6rem 0;
 }
 
 .about-content-list {
@@ -36,39 +31,11 @@ body {
   width: 100%;
 }
 
-.section--about-heading {
-  padding: 9.6rem 0 2.4rem 0;
-}
-
-.contact--heading {
-  font-size: 6.4rem;
-  margin-bottom: 3.2rem;
-}
-
 .section--connect-with-us {
+  padding: 6.4rem;
   background-color: #f3f8ff;
 
-  /* 
-  background: -webkit-linear-gradient(
-    to right,
-    #89fffd,
-    #ef32d9
-  );
-  background: linear-gradient(
-    to right,
-    #89fffd8c,
-    #ef32d97d
-  ); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
-  */
-
-  padding: 6.4rem;
-}
-
-.ne-btn {
-  text-decoration: none;
-  font-size: 2.2rem;
-  border: none;
-  background-color: inherit;
+  /* background: linear-gradient(to right, #94d8ff8c, #ff6eee7d); */
 }
 
 .footer {

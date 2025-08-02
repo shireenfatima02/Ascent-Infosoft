@@ -1,33 +1,27 @@
 /* #fbfbfe */
+/* #f3f8ff */
 /* #f7f9fd */
 
-body {
-  margin: 0;
-  min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../images/services/3.jpg);
+.section--services {
+  position: relative;
+  background-image: url(../images/services/abstract-triangles-background.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
+  padding: 19.2rem 9.6rem 9.6rem 9.6rem;
+  color: #000;
 }
 
 .main-nav-link:link,
-.main-nav-link:visited {
+.main-nav-link:visited,
+#hamburger {
   color: #fff;
 }
 
-/* .glow-effect {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
-} */
+.header.scrolled .main-nav-link,
+.header.scrolled #hamburger {
+  color: #333;
+}
 
 .heading-primary {
   font-size: 8rem;
@@ -40,10 +34,6 @@ body::before {
   font-size: 2.2rem;
   line-height: 1.5;
   margin-right: 30.8rem;
-}
-
-.section--services {
-  padding: 9.6rem;
 }
 
 .white-font {
@@ -63,14 +53,13 @@ span {
   padding: 1.2rem;
 
   display: grid;
-  /* background-color: aqua; */
   align-items: center;
   justify-items: center;
 }
 
 .benefit-icon {
-  width: 120px;
-  height: 120px;
+  width: 12rem;
+  height: 12rem;
   margin-top: 1.2rem;
 }
 
@@ -81,29 +70,19 @@ span {
 }
 
 .section--services-our-services {
-  padding: 9.6rem;
-  /* background-color: #f3f8ff; */
+  padding: 9.6rem 0;
   background-color: #b6f2ff5e;
 }
 
+.section--services-our-services > .container:nth-child(2) {
+  padding: 0;
+}
+
 .grid--2-cols {
-  margin: 0 -3rem;
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
 }
-
-/* .service {
-  padding-top: 5.2rem;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 1.1rem;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-*/
 
 .services--service {
   padding: 3.2rem;
@@ -111,8 +90,7 @@ span {
   overflow: hidden;
   background-color: #fff;
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
+  gap: 1.2rem;
 }
 
 .service-content {
@@ -135,21 +113,21 @@ span {
   margin-bottom: 2rem;
 }
 
-.service-img {
-  height: 7.2rem;
-  width: 7.2rem;
-}
-
 .service--cta {
   display: flex;
   gap: 1rem;
 }
 
-.nebtn {
+.service-img {
+  height: 7.2rem;
+  width: 7.2rem;
+}
+
+.service-btn {
   color: #fff;
   background-color: #51aee7;
   text-decoration: none;
-  /* font-size: 2rem; */
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.6rem;
   padding: 0.4rem 1.2rem;
@@ -160,5 +138,8 @@ span {
   font-family: inherit;
 
   display: inline-block;
-  font-size: 1.4rem;
+}
+
+.section--connect-with-us {
+  margin-top: 9.6rem;
 }

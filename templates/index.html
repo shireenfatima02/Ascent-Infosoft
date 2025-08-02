@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 
+{% block css %}
+
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  
+{% endblock %}
+
+
 {% block content %}
 
 <section class="section-hero">
@@ -18,7 +25,7 @@
         and web applications is designed to help your business thrive.
       </p>
 
-      <a href="#" class="btn">Start A Project</a>
+      <a href="#contact-us" class="btn btn--form">Start a Project</a>
     </div>
 
     <div class="hero-img-box">
@@ -26,7 +33,7 @@
         <img
           class="hero-img"
           src="{{ url_for('static', filename='images/hero-img.jpg') }}"
-          alt="Software development company, software development services, web development company"
+          alt="Ascent Infosoft, Software development company, Aurangabad, software development services, web development services"
         />
       </picture>
     </div>
@@ -38,13 +45,13 @@
     <h2 class="heading-secondary">Services</h2>
   </div>
 
-  <div class="container grid grid--2-cols">
+  <div class="container services-container grid grid--2-cols">
     <!-- Web Design -->
     <div class="service">
       <img
         class="service-img"
         src="{{ url_for('static', filename='images/web-design.png') }}"
-        alt="Web Design, web designing, UX/UI"
+        alt="Web Design, web designing, UI/UX"
       />
 
       <div class="service-content">
@@ -55,7 +62,6 @@
           solutions. We specialize in crafting unique brand identities and
           designing impactful collateral, bringing your ideas to life in a
           way that captivates and inspires.
-          <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
         </p>
       </div>
     </div>
@@ -76,7 +82,6 @@
           intuitive, user-friendly web designs that attract
           attention! Our designs are crafted to
           engage visitors and turn them into loyal customers.
-          <!-- We make your online presence hard to ignore with our intuitive, user-friendly web designs that convert big time! -->
         </p>
       </div>
     </div>
@@ -97,27 +102,6 @@
           software solutions. We specialize in creating powerful tools
           that optimize your operations, enhance productivity, and drive
           your business forward.
-          <!-- Bridge the gap between your vision and reality with our powerful software solutions that streamline your operations. -->
-        </p>
-      </div>
-    </div>
-
-    <!-- Mobile Application Development -->
-    <div class="service">
-      <img
-        class="service-img"
-        src="{{ url_for('static', filename='images/mobile-development.png') }}"
-        alt="Mobile Application Development, Android Development, mobile apps"
-      />
-
-      <div class="service-content">
-        <p class="service-heading">Mobile Application Development</p>
-
-        <p class="service-description">
-          Revolutionize your business with our custom mobile application
-          development services. Our proactive approach ensures that each
-          app is designed to enhance productivity and efficiency.
-          <!-- Revolutionize your business with our proactive IT services, tailored to enhance productivity and efficiency across your organization. -->
         </p>
       </div>
     </div>
@@ -138,7 +122,25 @@
           strategies and SEO tactics. We focus on measurable growth,
           helping your business reach the right audience and maximize its
           online presence.
-          <!-- Reach new and eloquent heights with our target-specific digital marketing strategies & tactics for measurable growth. -->
+        </p>
+      </div>
+    </div>
+
+    <!-- Mobile Application Development -->
+    <div class="service">
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/mobile-development.png') }}"
+        alt="Mobile Application Development, Android Development, mobile apps"
+      />
+
+      <div class="service-content">
+        <p class="service-heading">Mobile Application Development</p>
+
+        <p class="service-description">
+          Revolutionize your business with our custom mobile application
+          development services. Our proactive approach ensures that each
+          app is designed to enhance productivity and efficiency.
         </p>
       </div>
     </div>
@@ -159,7 +161,6 @@
           solutions. We help you sell smarter, not harder, by creating
           efficient, user-friendly platforms that enhance the shopping
           experience.
-          <!-- Streamlined e-commerce solutions to help you boost your online sales. Sell smarter, not harder. -->
         </p>
       </div>
     </div>
@@ -198,11 +199,13 @@
     </div>
 
     <div class="about-img">
-      <img
-        class="img"
-        src="{{ url_for('static', filename='images/about-img.jpg') }}"
-        alt="Laptop screen, web development, software development"
-      />
+      <picture>
+        <img
+          class="img"
+          src="{{ url_for('static', filename='images/about-img.jpg') }}"
+          alt="Laptop screen, web development, software development"
+        />
+      </picture>
     </div>
   </div>
 </section>
@@ -227,7 +230,7 @@
       <img
         class="industry-icon"
         src="{{ url_for('static', filename='images/icons/education.png') }}"
-        alt="Education, institutions, softwares or applications for institutes"
+        alt="Education, institutions, software applications for institutes"
       />
 
       <p class="industry-name">Education</p>
@@ -275,23 +278,22 @@
   </div>
 </section>
 
-<section class="section-contact-us">
+<section class="section-contact-us" id="contact-us">
   <div class="container">
     <div class="contact">
       <div class="contact-img-box">
         <img
           class="contact-img"
           src="{{ url_for('static', filename='images/contact-us.png') }}"
-          alt="Contact Us, contact form"
+          alt="Contact Us, Software Development Company, Aurangabad"
         />
       </div>
 
       <div class="contact-text-box">
         <h2 class="heading-secondary center-text">Let's Connect!</h2>
 
-        <form class="contact-form" name="submit-request">
+        <form id="contact-form" class="contact-form" method="POST" action="/">
           <div>
-            <!-- <label for="full-name">Name</label> -->
             <input
               id="full-name"
               type="text"
@@ -302,7 +304,6 @@
           </div>
 
           <div>
-            <!-- <label for="email">Email</label> -->
             <input
               id="email"
               type="email"
@@ -313,7 +314,6 @@
           </div>
 
           <div>
-            <!-- <label for="mobile-number">Mobile Number</label> -->
             <input
               id="mobile-number"
               type="text"
@@ -324,20 +324,44 @@
           </div>
 
           <div>
-            <!-- <label for="message">Message</label> -->
             <textarea
               id="message"
               type="text"
               placeholder="Message"
               name="message"
-            >
-            </textarea>
+              required
+            ></textarea>
           </div>
           
           <div class="submit-btn">
-            <button class="btn btn--form">Submit Request</button>
+            <button type="submit" class="btn btn--form">Submit Request</button>
           </div>
         </form>
+
+        <div id="processing-message" class="notification-message processing">
+          <p>Processing your request...</p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        
+        <div id="success-message" class="notification-message success">
+          <p>
+            Your request has been submitted successfully!
+            <br>
+            We'll get back to you soon!
+          </p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        
+        <div id="error-message" class="notification-message error">
+          <p>Error submitting form!</p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -356,9 +380,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>

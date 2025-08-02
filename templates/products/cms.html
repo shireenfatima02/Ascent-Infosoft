@@ -2,10 +2,9 @@
 
 
 {% block css %}
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
+
 {% endblock %}
 
 
@@ -13,6 +12,11 @@
 
 <section class="section--product-hero">
   <div class="product-hero center-text">
+    <img
+      src="{{ url_for('static', filename='images/products/cms-icon.png') }}"
+      alt="CMS, College Management System, Ascent Infosoft"
+    />
+
     <h1 class="heading-primary">CMS</h1>
 
     <h2 class="heading-primary">
@@ -42,18 +46,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Complete admission process automation with online applications.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Unique student ID generation with lifetime academic records.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Batch-wise and department-wise student categorization.</p>
-          </li>
+          <li>Complete admission process automation with online applications.</li>
+          <li>Unique student ID generation with lifetime academic records.</li>
+          <li>Batch-wise and department-wise student categorization.</li>
         </ul>
       </div>
     </div>
@@ -64,22 +59,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automated fee collection with payment gateway integration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Scholarship and concession management.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Financial aid tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Receipt generation and outstanding dues tracking.</p>
-          </li>
+          <li>Automated fee collection with payment gateway integration.</li>
+          <li>Scholarship and concession management.</li>
+          <li>Financial aid tracking.</li>
+          <li>Receipt generation and outstanding dues tracking.</li>
         </ul>
       </div>
     </div>
@@ -90,40 +73,22 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Smart attendance tracking with biometric integration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Class schedule management with room allocation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Substitute teacher arrangements.</p>
-          </li>
+          <li>Smart attendance tracking with biometric integration.</li>
+          <li>Class schedule management with room allocation.</li>
+          <li>Substitute teacher arrangements.</li>
         </ul>
       </div>
     </div>
 
     <div class="features">
       <div class="feature-heading">
-        <h1 class="heading-tertiary">Faculty Management</h1>
+        <h1 class="heading-tertiary small-heading">Department & Resource Management</h1>
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Teacher profile management with qualifications tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Workload distribution and leave management.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Performance evaluation system.</p>
-          </li>
+          <li>Centralized department administration.</li>
+          <li>Laboratory and equipment inventory.</li>
+          <li>Library management system integration.</li>
         </ul>
       </div>
     </div>
@@ -134,22 +99,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Exam scheduling and seat allocation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Gradebook management with GPA calculation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Digital mark sheets and transcripts.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Malpractice tracking and reporting.</p>
-          </li>
+          <li>Exam scheduling and seat allocation.</li>
+          <li>Gradebook management with GPA calculation.</li>
+          <li>Digital mark sheets and transcripts.</li>
+          <li>Malpractice tracking and reporting.</li>
         </ul>
       </div>
     </div>
@@ -160,44 +113,23 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Real-time academic progress tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Attendance and grade monitoring.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Fee payment and receipt access.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Notification system.</p>
-          </li>
+          <li>Real-time academic progress tracking.</li>
+          <li>Attendance and grade monitoring.</li>
+          <li>Fee payment and receipt access.</li>
+          <li>Notification system.</li>
         </ul>
       </div>
     </div>
-        
+
     <div class="features">
       <div class="feature-heading">
-        <h1 class="heading-tertiary small-heading">Department & Resource Management</h1>
+        <h1 class="heading-tertiary">Faculty Management</h1>
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Centralized department administration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Laboratory and equipment inventory.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Library management system integration.</p>
-          </li>
+          <li>Teacher profile management with qualifications tracking.</li>
+          <li>Workload distribution and leave management.</li>
+          <li>Performance evaluation system.</li>
         </ul>
       </div>
     </div>
@@ -208,18 +140,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automatic data backup and synchronization.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Role-based access control (Admin, Faculty, Students, Parents).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Complete audit trails for all system activities.</p>
-          </li>
+          <li>Role-based access control (Admin, Faculty, Students, Parents).</li>
+          <li>Automatic data backup and synchronization.</li>
+          <li>Complete audit trails for all system activities.</li>
         </ul>
       </div>
     </div>
@@ -230,18 +153,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Digital course and curriculum planning.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Subject allocation and credit system management.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Elective selection and change requests.</p>
-          </li>
+          <li>Digital course and curriculum planning.</li>
+          <li>Subject allocation and credit system management.</li>
+          <li>Elective selection and change requests.</li>
         </ul>
       </div>
     </div>
@@ -252,18 +166,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>LMS (Learning Management System) connectivity.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Online assignment submission and grading.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Virtual classroom integration.</p>
-          </li>
+          <li>LMS (Learning Management System) connectivity.</li>
+          <li>Online assignment submission and grading.</li>
+          <li>Virtual classroom integration.</li>
         </ul>
       </div>
     </div>
@@ -274,18 +179,9 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>UGC and AICTE compliance reporting.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>NAAC accreditation documentation support.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Audit-ready record keeping.</p>
-          </li>
+          <li>UGC and AICTE compliance reporting.</li>
+          <li>NAAC accreditation documentation support.</li>
+          <li>Audit-ready record keeping.</li>
         </ul>
       </div>
     </div>
@@ -296,18 +192,14 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Generate reports for:</p>
-          </li>
-          <li>Student performance</li>
-          <li>Attendance trends</li>
-          <li>Faculty workload</li>
-          <li>Financial operations</li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Custom report builder with export options (PDF/Excel).</p>
-          </li>
+          <li>Generate reports for:</li>
+          <div class="subdetails-group">
+            <li class="subdetail">Student performance</li>
+            <li class="subdetail">Attendance trends</li>
+            <li class="subdetail">Faculty workload</li>
+            <li class="subdetail">Financial operations</li>
+          </div>
+          <li>Custom report builder with export options (PDF/Excel).</li>
         </ul>
       </div>
     </div>
@@ -338,13 +230,13 @@
 
   <div class="product-contact">
     <div>
-      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
       <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
       <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
     </div>
   </div>
 
-  <div class="last-p center-text">
+  <div class="connect-tagline center-text">
     <p>Transforming education through technology - one institution at a time.</p>
   </div>
 </section>
@@ -365,9 +257,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>

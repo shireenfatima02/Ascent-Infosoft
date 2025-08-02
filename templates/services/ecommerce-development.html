@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        E-Commerce Development Services
+        <br>
+        <span>Scalable Online Stores That Convert Browsers Into Buyers</span>
+      </h1>
+
+      <p class="hero-description">
+        Launch a high-performing eCommerce store with our end-to-end development
+        solutions. We build secure, mobile-optimized online shops with seamless
+        checkout experiences that maximize sales and customer retention.
+      </p>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/services/ecommerce-development.jpg') }}"
+          alt="Ascent Infosoft, ecommerce development, ecommerce development services, Aurangabad"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Our E-Commerce Development Services</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/platform-expertise.png') }}"
+        alt="Ecommmerce for Shopify and Magento"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Platform Expertise</p>
+        
+        <p class="benefit-description">
+          Custom solutions for Shopify, Magento & headless commerce.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/mobile-design.png') }}"
+        alt="Mobile first design, cross platform, responsive design"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Mobile-First Design</p>
+        
+        <p class="benefit-description">
+          60%+ of traffic comes from mobile - we optimize for it.
+        </p>
+      </div>
+    </div>
+  
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/conversion-focused.png') }}"
+        alt="Conversion focused user experience"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Conversion-Focused UX</p>
+        
+        <p class="benefit-description">
+          Proven layouts that reduce cart abandonment.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/enterprise-security.png') }}"
+        alt="Secure applications, enterprise security"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Enterprise-Grade Security</p>
+        
+        <p class="benefit-description">
+          PCI compliance and fraud protection.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/scalable-softwares.png') }}"
+        alt="Scalable architecture"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Scalable Architecture</p>
+        
+        <p class="benefit-description">
+          Handles traffic spikes during peak seasons.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-expertise">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our E-Commerce Development Expertise
+    </h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- 01 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">01</p>
+
+      <h3 class="heading-tertiary">
+        Custom Online Store Development
+      </h3>
+
+      <p class="expertise-description">
+        We build tailored eCommerce platforms with personalized checkout flows, payment integrations, and multi-vendor marketplace capabilities.
+      </p>
+    </div>
+
+    <!-- 02 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">02</p>
+
+      <h3 class="heading-tertiary">
+        Platform Migrations & Upgrades
+      </h3>
+
+      <p class="expertise-description">
+        Our team ensures seamless platform transitions with zero-downtime data migration and legacy system modernization.
+      </p>
+    </div>
+
+    <!-- 03 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">03</p>
+
+      <h3 class="heading-tertiary">
+        Headless Commerce Solutions
+      </h3>
+
+      <p class="expertise-description">
+        We deliver API-driven commerce architectures with CMS integrations and Progressive Web App functionality.
+      </p>
+    </div>
+
+    <!-- 04 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">04</p>
+
+      <h3 class="heading-tertiary">
+        Subscription & Membership Models
+      </h3>
+
+      <p class="expertise-description">
+        We implement recurring billing systems with member-exclusive content areas and subscription management dashboards.
+      </p>
+    </div>
+
+    <!-- 05 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">05</p>
+
+      <h3 class="heading-tertiary">
+        International E-Commerce
+      </h3>
+
+      <p class="expertise-description">
+        We develop globally-ready stores with multi-currency support, localized payments, and geo-targeted pricing.
+      </p>
+    </div>
+
+    <!-- 06 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">06</p>
+
+      <h3 class="heading-tertiary">
+        Performance Optimization
+      </h3>
+
+      <p class="expertise-description">
+        We enhance store speed through 90+ score optimizations, database tuning, and advanced caching solutions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-development-process">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Development Process
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Discovery Workshop</h3>
+        </div>
+        <p class="step-description">Business goals and technical requirements.</p>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>UX/UI Design</h3>
+        </div>
+        <p class="step-description">Conversion-focused store design.</p>
+      </div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-code"></i>
+          <h3>Development Sprint</h3>
+        </div>
+        <p class="step-description">Agile implementation.</p>
+      </div>
+    </div>
+    
+    <!-- Step 4 -->
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-shield-alt"></i>
+          <h3>QA Testing</h3>
+        </div>
+        <p class="step-description">Performance, security and usability testing.</p>
+      </div>
+    </div>
+    
+    <!-- Step 5 -->
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-rocket"></i>
+          <h3>Launch Preparation</h3>
+        </div>
+        <p class="step-description">SEO setup and analytics.</p>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-headset"></i>
+          <h3>Post-Launch Support</h3>
+        </div>
+        <p class="step-description">Ongoing maintenance and updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-connect">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Let's Build Your High-Converting Online Store</h2>
+    
+    <p class="connect-content">
+      From MVP to enterprise solutions - we deliver E-Commerce platforms that grow with your business.
+      <br>
+      Get a free consultation with our E-Commerce strategists.
+    </p>
+
+    <a class="connect-link" href="{{ url_for('contact') }}">Start Your Project</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

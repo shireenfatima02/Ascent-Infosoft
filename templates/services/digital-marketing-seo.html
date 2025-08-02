@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        Digital Marketing & SEO Services
+        <br>
+        <span>Data-Driven Strategies to Grow Your Online Visibility & Conversions</span>
+      </h1>
+
+      <p class="hero-description">
+        Dominate search rankings and maximize ROI with our full-funnel digital marketing
+        solutions. We combine cutting-edge SEO techniques with performance marketing to
+        deliver targeted traffic, qualified leads, and sustainable business growth.
+      </p>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/services/digital-marketing.jpg') }}"
+          alt="Ascent Infosoft, digital marketing and seo services, business growth, Aurangabad"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Our Digital Marketing Services</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/digital-strategy.png') }}"
+        alt="Digital marketing, digital strategy"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">360° Digital Strategy</p>
+        
+        <p class="benefit-description">
+          Integrated campaigns across all channels.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/dashboards.png') }}"
+        alt="Reports and dashboards"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Transparent Reporting</p>
+        
+        <p class="benefit-description">
+          Real-time dashboards with actionable insights.
+        </p>
+      </div>
+    </div>
+  
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/guidelines.png') }}"
+        alt="SEO optimization"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">White-Hat SEO</p>
+        
+        <p class="benefit-description">
+          Optimization that complies with Google guidelines.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/seo-optimized.png') }}"
+        alt="Business growth"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Conversion Optimization</p>
+        
+        <p class="benefit-description">
+          Science-backed techniques to boost your CRO.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/account-managers.png') }}"
+        alt="Experts for digital marketing and seo"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Dedicated Account Managers</p>
+        
+        <p class="benefit-description">
+          Senior experts overseeing your campaigns.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-expertise">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Digital Marketing Expertise
+    </h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- 01 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">01</p>
+
+      <h3 class="heading-tertiary">
+        Search Engine Optimization (SEO)
+      </h3>
+
+      <p class="expertise-description">
+        We optimize websites through technical audits, keyword research, and content strategies to improve rankings for both local and enterprise businesses.
+      </p>
+    </div>
+
+    <!-- 02 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">02</p>
+
+      <h3 class="heading-tertiary">
+        Pay-Per-Click Advertising (PPC)
+      </h3>
+
+      <p class="expertise-description">
+        Our targeted ad campaigns span Google, Microsoft, and social platforms with advanced remarketing to maximize conversions.
+      </p>
+    </div>
+
+    <!-- 03 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">03</p>
+
+      <h3 class="heading-tertiary">
+        Content Marketing
+      </h3>
+
+      <p class="expertise-description">
+        We create SEO-optimized content including blogs, videos, and infographics that establish authority and drive engagement.
+      </p>
+    </div>
+
+    <!-- 04 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">04</p>
+
+      <h3 class="heading-tertiary">
+        Social Media Marketing
+      </h3>
+
+      <p class="expertise-description">
+        We grow brands through organic community building and paid social campaigns enhanced by strategic influencer partnerships.
+      </p>
+    </div>
+
+    <!-- 05 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">05</p>
+
+      <h3 class="heading-tertiary">
+        Email & Automation Marketing
+      </h3>
+
+      <p class="expertise-description">
+        Our automated email systems deliver personalized nurture sequences and cart recovery flows to boost customer retention.
+      </p>
+    </div>
+
+    <!-- 06 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">06</p>
+
+      <h3 class="heading-tertiary">
+        Analytics & Conversion Optimization
+      </h3>
+
+      <p class="expertise-description">
+        We improve conversions through behavior analysis, A/B testing, and funnel optimization backed by precise attribution modeling.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-development-process">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Performance Marketing Process
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-tasks"></i>
+          <h3>Discovery & Audit</h3>
+        </div>
+        <p class="step-description">In-depth analysis of your digital footprint.</p>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-route"></i>
+          <h3>Strategy Development</h3>
+        </div>
+        <p class="step-description">Custom roadmap aligned with business goals.</p>
+      </div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-cogs"></i>
+          <h3>Implementation</h3>
+        </div>
+        <p class="step-description">Campaign setup and optimization.</p>
+      </div>
+    </div>
+    
+    <!-- Step 4 -->
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-chart-line"></i>
+          <h3>Monitoring</h3>
+        </div>
+        <p class="step-description">Daily performance tracking.</p>
+      </div>
+    </div>
+    
+    <!-- Step 5 -->
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-file-alt"></i>
+          <h3>Reporting</h3>
+        </div>
+        <p class="step-description">Monthly reviews with strategic recommendations.</p>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-expand"></i>
+          <h3>Scale</h3>
+        </div>
+        <p class="step-description">Continuous improvement and expansion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-connect">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Ready to Transform Your Digital Presence?</h2>
+    
+    <p class="connect-content">
+      Get measurable results with marketing that actually works.
+      <br>
+      Request a free marketing audit of your current digital performance.
+    </p>
+
+    <a class="connect-link" href="{{ url_for('contact') }}">Get Your Free Strategy Session</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

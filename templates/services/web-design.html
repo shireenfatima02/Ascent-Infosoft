@@ -1,0 +1,337 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        Web Design Services
+        <br>
+        <span>Stunning, User-Centric Designs That Convert Visitors Into Customers</span>
+      </h1>
+
+      <p class="hero-description">
+        Make a lasting impression with custom web design that blends aesthetics with
+        functionality. We craft visually captivating, intuitive interfaces optimized
+        for engagement and conversions across all devices.
+      </p>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/services/web-design.jpg') }}"
+          alt="Ascent Infosoft, website designing, web designing services, Aurangabad"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Our Web Design Services</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/custom-designs.png') }}"
+        alt="Custom designs, custom websites"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">100% Custom Designs</p>
+        
+        <p class="benefit-description">
+          Unique to your brand (no cookie-cutter templates).
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/mobile-design.png') }}"
+        alt="Responsive websites, websites for desktops and mobiles"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Mobile-Optimized UI/UX</p>
+        
+        <p class="benefit-description">
+          Flawless experience on any screen size.
+        </p>
+      </div>
+    </div>
+  
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/cross-platform.png') }}"
+        alt="conversion focused layouts"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Conversion-Focused Layouts</p>
+        
+        <p class="benefit-description">
+          Strategic placement of CTAs and content.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/fast-loading.png') }}"
+        alt="Fast loading websites, optimized websites"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Fast-Loading Designs</p>
+        
+        <p class="benefit-description">
+          Optimized graphics and clean code for performance.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/seo.png') }}"
+        alt="SEO optimization"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">SEO-Friendly Structure</p>
+        
+        <p class="benefit-description">
+          Designed with search visibility in mind.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-expertise">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Web Design Expertise
+    </h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- 01 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">01</p>
+
+      <h3 class="heading-tertiary">
+        Responsive Website Design
+      </h3>
+
+      <p class="expertise-description">
+        Pixel-perfect designs that adapt seamlessly to desktops, tablets, and mobiles.
+      </p>
+    </div>
+
+    <!-- 02 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">02</p>
+
+      <h3 class="heading-tertiary">
+        UI/UX Design
+      </h3>
+
+      <p class="expertise-description">
+        Intuitive user interfaces backed by research-driven user experience principles.
+      </p>
+    </div>
+
+    <!-- 03 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">03</p>
+
+      <h3 class="heading-tertiary">
+        Landing Page Design
+      </h3>
+
+      <p class="expertise-description">
+        High-converting pages for campaigns, product launches, and lead generation.
+      </p>
+    </div>
+
+    <!-- 04 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">04</p>
+
+      <h3 class="heading-tertiary">
+        Redesign & Modernization
+      </h3>
+
+      <p class="expertise-description">
+        Breath new life into outdated websites with contemporary design trends.
+      </p>
+    </div>
+
+    <!-- 05 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">05</p>
+
+      <h3 class="heading-tertiary">
+        Brand Identity Integration
+      </h3>
+
+      <p class="expertise-description">
+        Consistent visual language across colors, typography, and graphic elements.
+      </p>
+    </div>
+
+    <!-- 06 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">06</p>
+
+      <h3 class="heading-tertiary">
+        Prototyping & Wireframing
+      </h3>
+
+      <p class="expertise-description">
+        Interactive mockups to validate concepts before development begins.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-development-process">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Design Process
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Discovery Workshop</h3>
+        </div>
+        <p class="step-description">Understand your brand, goals, and audience.</p>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-palette"></i>
+          <h3>Mood Boards & Style Tiles</h3>
+        </div>
+        <p class="step-description">Establish visual direction.</p>
+      </div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Wireframing</h3>
+        </div>
+        <p class="step-description">Structure the user flow and layout.</p>
+      </div>
+    </div>
+    
+    <!-- Step 4 -->
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-paint-brush"></i>
+          <h3>UI Design</h3>
+        </div>
+        <p class="step-description">High-fidelity mockups with your branding.</p>
+      </div>
+    </div>
+    
+    <!-- Step 5 -->
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-tv"></i>
+          <h3>Prototyping</h3>
+        </div>
+        <p class="step-description">Interactive demo of the user experience.</p>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-file-export"></i>
+          <h3>Handoff & Support</h3>
+        </div>
+        <p class="step-description">Developer-ready assets and style guides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-connect">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Let's Create Your Award-Winning Website Design</h2>
+    
+    <p class="connect-content">
+      From concept to launch, we deliver designs that tell your brand story and drive business results.
+      <br>
+      Get a free design consultation with our creative director.
+    </p>
+
+    <a class="connect-link" href="{{ url_for('contact') }}">Start Your Design Project!</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

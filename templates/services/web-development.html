@@ -1,0 +1,325 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        Web Development Services
+        <br>
+        <span>High-Performance, Scalable Websites Built for Results</span>
+      </h1>
+
+      <p class="hero-description">
+        Elevate your online presence with custom web development solutions designed
+        for speed, security, and seamless user experiences. We build responsive,
+        future-ready websites that drive engagement and conversions.
+      </p>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/services/web-development.jpg') }}"
+          alt="Ascent Infosoft, web development, web development services, Aurangabad"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Our Web Development Services</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/custom-solutions.png') }}"
+        alt="Custom softwares, custom web applications"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Custom-Coded Solutions</p>
+        
+        <p class="benefit-description">
+          Bespoke websites tailored to your brand, not restrictive templates.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/mobile-design.png') }}"
+        alt="Responsive design, websites, web applications"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Mobile-First Design</p>
+        
+        <p class="benefit-description">
+          Flawless performance on all devices (iOS, Android, tablets).
+        </p>
+      </div>
+    </div>
+  
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/seo-optimized.png') }}"
+        alt="SEO optimization for websites"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">SEO-Optimized Architecture</p>
+        
+        <p class="benefit-description">
+          Built with clean code and fast load times for higher rankings.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/security.png') }}"
+        alt="Scalable softwares, scalable web applications"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Secure & Scalable</p>
+        
+        <p class="benefit-description">
+          Enterprise-grade security and infrastructure to handle traffic spikes.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/third-party.png') }}"
+        alt="Payment integration, third party integration"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Third-Party Integrations</p>
+        
+        <p class="benefit-description">
+          Seamless API connections (payment gateways, CRM, analytics).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-expertise">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Web Development Expertise
+    </h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- 01 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">01</p>
+
+      <h3 class="heading-tertiary">
+        Frontend Development
+      </h3>
+
+      <p class="expertise-description">
+        Interactive, pixel-perfect UIs with React, Angular, or Vue.js for engaging user experiences.
+      </p>
+    </div>
+
+    <!-- 02 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">02</p>
+
+      <h3 class="heading-tertiary">
+        Backend Development
+      </h3>
+
+      <p class="expertise-description">
+        Robust server-side logic using Node.js, Python (Django), PHP (Laravel), or .NET Core.
+      </p>
+    </div>
+
+    <!-- 03 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">03</p>
+
+      <h3 class="heading-tertiary">
+        Full-Stack Web Apps
+      </h3>
+
+      <p class="expertise-description">
+        End-to-end development with MERN (MongoDB, Express, React, Node) or Jamstack architectures.
+      </p>
+    </div>
+
+    <!-- 04 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">04</p>
+
+      <h3 class="heading-tertiary">
+        CMS Development
+      </h3>
+
+      <p class="expertise-description">
+        Custom WordPress, Shopify, or headless CMS solutions for easy content management.
+      </p>
+    </div>
+
+    <!-- 05 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">05</p>
+
+      <h3 class="heading-tertiary">
+        Progressive Web Apps (PWAs)
+      </h3>
+
+      <p class="expertise-description">
+        App-like experiences with offline access, push notifications, and lightning-fast speeds.
+      </p>
+    </div>
+
+    <!-- 06 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">06</p>
+
+      <h3 class="heading-tertiary">
+        Web Portal Development
+      </h3>
+
+      <p class="expertise-description">
+        Secure portals for clients, employees, or partners with role-based access control.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-development-process">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Development Process
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-tasks"></i>
+          <h3>Requirement Analysis</h3>
+        </div>
+        <p class="step-description">Define goals, features, and KPIs.</p>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-object-group"></i>
+          <h3>Wireframing & Prototyping</h3>
+        </div>
+        <p class="step-description">UX-focused layouts for user flow validation.</p>
+      </div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-code-branch"></i>
+          <h3>Agile Development</h3>
+        </div>
+        <p class="step-description">Sprints with real-time progress demos.</p>
+      </div>
+    </div>
+    
+    <!-- Step 4 -->
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-window-restore"></i>
+          <h3>Cross-Browser Testing</h3>
+        </div>
+        <p class="step-description">Compatibility checks (Chrome, Safari, Firefox, Edge).</p>
+      </div>
+    </div>
+    
+    <!-- Step 5 -->
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>Launch & Maintenance</h3>
+        </div>
+        <p class="step-description">Deployment + 24/7 monitoring and updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-connect">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Let's Build Your Next-Gen Website</h2>
+    
+    <p class="connect-content">
+      From brochure sites to complex web apps, we deliver high-performing solutions tailored to your needs.
+      <br>
+      Get a free quote with a personalized project roadmap and timeline.
+    </p>
+
+    <a class="connect-link" href="{{ url_for('contact') }}">Start Your Project!</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}

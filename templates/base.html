@@ -10,12 +10,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/query.css') }}">
 
     {% block css %}
     {% endblock %}
@@ -24,27 +27,93 @@
   </head>
 
   <body>
-    <header class="header">
+    <header id="default-header" class="header">
       <a href="#">
-        <img class="logo" src="{{ url_for('static', filename='images/ascent_logo1.png') }}" alt="Ascent Infosoft logo" />
+        <img
+          class="logo"
+          src="{{ url_for('static', filename='images/ascent_logo.png') }}"
+          alt="Ascent Infosoft, Software Development Company, Aurangabad, CSN"
+        />
       </a>
+
+      <!-- Hamburger -->
+      <ion-icon class="menu-icon" name="menu-outline" id="hamburger"></ion-icon>
+
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobile-nav">
+        <div class="mobile-nav-header">
+          <img class="logo" src="{{ url_for('static', filename='images/ascent_logo.png') }}" alt="Ascent Infosoft" />
+          <button class="icon-btn close-btn" id="close-btn">
+            <ion-icon class="menu-icon" name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="mobile-nav-list">
+          <li class="mobile-item"><a href="{{ url_for('index') }}">Home</a></li>
+          
+          <li class="mobile-item dropdown-toggle">
+            <a href="{{ url_for('services') }}">Services</a>
+            <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+            <ul class="submenu">
+              <li><a href="{{ url_for('software_development') }}">Software Development</a></li>
+              <li><a href="{{ url_for('web_development') }}">Web Development</a></li>
+              <li><a href="{{ url_for('web_designing') }}">Web Designing</a></li>
+              <li><a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a></li>
+              <li><a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a></li>
+              <li><a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a></li>
+            </ul>
+          </li>
+          
+          <li class="mobile-item dropdown-toggle">
+            <a href="{{ url_for('products') }}">Products</a>
+            <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+            <ul class="submenu">
+              <li><a href="{{ url_for('hms') }}">Hospital Management System</a></li>
+              <li><a href="{{ url_for('cms') }}">College Management System</a></li>
+              <li><a href="{{ url_for('crm') }}">Customer Relationship Management</a></li>
+              <li><a href="{{ url_for('lms') }}">Leave Management System</a></li>
+            </ul>
+          </li>
+          
+          <li class="mobile-item"><a href="{{ url_for('about') }}">About Us</a></li>
+          <li class="mobile-item"><a href="{{ url_for('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
             <a href="{{ url_for('index') }}" class="main-nav-link">Home</a>
           </li>
+          
+          <li class="nav-item dropdown">
+            <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
+            <div class="dropdown-menu">
+              <a href="{{ url_for('software_development') }}">Software Development</a>
+              <a href="{{ url_for('web_development') }}">Web Development</a>
+              <a href="{{ url_for('web_designing') }}">Web Designing</a>
+              <a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a>
+              <a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a>
+              <a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+            <div class="dropdown-menu">
+              <a href="{{ url_for('hms') }}">Hospital Management System</a>
+              <a href="{{ url_for('cms') }}">College Management System</a>
+              <a href="{{ url_for('crm') }}">Customer Relationship Management</a>
+              <a href="{{ url_for('lms') }}">Leave Management System</a>
+              <!-- <a href="{{ url_for('sm') }}">Store Management System</a> -->
+            </div>
+          </li>
+          
+          <!-- <li>
+            <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+          </li> -->
           <li>
             <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
-          </li>
-          <li>
-            <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
-          </li>
-          <li>
-            <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
-          </li>
-          <li>
-            <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
           </li>
           <li>
             <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
@@ -53,7 +122,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       {% block content %}
       {% endblock %}
     </main>
@@ -62,7 +131,11 @@
       <div class="container grid grid--footer">
         <div class="logo-col">
           <a class="footer-logo" href="#">
-            <img class="logo" src="{{ url_for('static', filename='images/ascent_logo1.png') }}" alt="Ascent Infosoft logo" />
+            <img
+              class="logo"
+              src="{{ url_for('static', filename='images/ascent_logo.png') }}"
+              alt="Ascent Infosoft, Software Development Company, Aurangabad, CSN"
+            />
           </a>
 
           <p class="footer-company-description">
@@ -118,12 +191,12 @@
           <p class="footer-heading">Our Services</p>
 
           <ul class="footer-nav">
-            <li><a class="footer-link" href="#">Web Design</a></li>
-            <li><a class="footer-link" href="#">Web Development</a></li>
-            <li><a class="footer-link" href="#">Software Development</a></li>
-            <li><a class="footer-link" href="#">Mobile App Development</a></li>
-            <li><a class="footer-link" href="#">Digital Marketing & SEO</a></li>
-            <li><a class="footer-link" href="#">Ecommerce Development</a></li>
+            <li><a class="footer-link" href="{{ url_for('web_designing') }}">Web Design</a></li>
+            <li><a class="footer-link" href="{{ url_for('web_development') }}">Web Development</a></li>
+            <li><a class="footer-link" href="{{ url_for('software_development') }}">Software Development</a></li>
+            <li><a class="footer-link" href="{{ url_for('mobile_application_development') }}">Mobile App Development</a></li>
+            <li><a class="footer-link" href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a></li>
+            <li><a class="footer-link" href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a></li>
           </ul>
         </nav>
 
@@ -156,8 +229,8 @@
 
             <p class="footer-flex">
               <ion-icon class="contact-icon" name="mail-outline"></ion-icon>
-              <a class="footer-link" href="mailto:ascentinfosoft@gmail.com">
-                ascentinfosoft@gmail.com
+              <a class="footer-link" href="mailto:aamir@ascentinfosoft.com">
+                aamir@ascentinfosoft.com
               </a>
             </p>
 

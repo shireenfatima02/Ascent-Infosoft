@@ -1,526 +1,379 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends 'base.html' %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+{% block css %}
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services.css') }}">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+  <script src="{{ url_for('static', filename='js/services.js') }}"></script>
 
-    <title>Ascent Infosoft &ndash; Services</title>
-  </head>
+{% endblock %}
 
-  <body>
-    <header class="header">
-      <a href="#">
-        <!-- <img class="logo glow-effect" src="../static/images/ascent_logo1_white_shadow.png" alt="Ascent Infosoft logo" /> -->
-        <img
-          class="logo"
-          src="{{ url_for('static', filename='images/Ascent Logo White.png') }}"
-          alt="Ascent Infosoft logo"
-        />
-      </a>
 
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a href="../index.html" class="main-nav-link">Home</a></li>
-          <li>
-            <a href="../about-us.html" class="main-nav-link">About Us</a>
-          </li>
-          <li>
-            <a href="services.html" class="main-nav-link">Services</a>
-          </li>
-          <li>
-            <a href="../products.html" class="main-nav-link">Products</a>
-          </li>
-          <li>
-            <a href="../portfolio.html" class="main-nav-link">Portfolio</a>
-          </li>
-          <li>
-            <a href="../contact-us.html" class="main-nav-link">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+{% block content %}
 
-    <main>
-      <section class="section--services">
-        <div class="service-hero">
-          <h1 class="heading-primary white-font">
-            Innovate. Build. Scale.
-            <br>
-            <span>Your Software Partner for Success.</span>
-            <!-- From Concept to Code &dash; We Build Software That Works. -->
-            <!-- Engineering Excellence, Delivering Innovation. -->
-            <!-- Smart, Scalable, and Secure Solutions for a Digital World. -->
-            <!-- Your Vision, Our Code &dash; Building the Future Together. -->
-            <!-- Custom Software, Seamless Integration, Limitless Possibilities. -->
-            <!-- Innovative Software Solutions, Tailored for Success. -->
-            <!-- We design and develop user-centric, innovative solutions. -->
-          </h1>
-        </div>
+<section class="section--services">
+  <header id="hero-header" class="header">
+    <a href="#">
+      <img
+        id="logo"
+        class="logo"
+        src="{{ url_for('static', filename='images/ascent_logo_white.png') }}"
+        data-logo-colored="{{ url_for('static', filename='images/ascent_logo.png') }}"
+        data-logo-white="{{ url_for('static', filename='images/ascent_logo_white.png') }}"
+        alt="Ascent Infosoft, Software Development Company, Aurangabad, CSN"
+      />
+    </a>
 
-        <div>
-          <p class="white-font hero-description">
-            <!-- At Ascent Infosoft, we provide end-to-end software development solutions 
-            tailored to your business needs. Our expertise covers industry-specific 
-            consulting, full-cycle development, and ongoing system maintenance.  -->
+    <!-- Hamburger -->
+    <ion-icon class="menu-icon" name="menu-outline" id="hamburger"></ion-icon>
 
-            <!-- Whether you need dedicated development teams or staff augmentation, we 
-            offer flexible engagement models to ensure seamless execution and optimal results. -->
-            
-            From custom software development to seamless integrations and cutting-edge 
-            solutions, we empower businesses with technology that drives growth
-            <br>
-            and efficiency. Our expert team transforms ideas into scalable,
-            <br>
-            high-performance software tailored to your unique needs.
-          </p>
-        </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav">
+      <div class="mobile-nav-header">
+        <img class="logo" src="{{ url_for('static', filename='images/ascent_logo.png') }}" alt="Ascent Infosoft" />
+        <button class="icon-btn close-btn" id="close-btn">
+          <ion-icon class="menu-icon" name="close-outline"></ion-icon>
+        </button>
+      </div>
 
-        <div>
-
-        </div>
-      </section>
-
-      <section class="section--services-why-choose-us">
-        <div class="container center-text">
-          <h2 class="heading-secondary">Why Choose Ascent Infosoft?</h2>
-        </div>
-
-        <div class="container grid grid--6-cols">
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/project-launch.png') }}"
-              alt="On time launch, software products, software development"
-            />
-      
-            <p class="benefit center-text">On - Time Launch</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/partnership.png') }}"
-              alt="Trusted partner, company partnership"
-            />
-      
-            <p class="benefit center-text">Trusted Partner</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/expert-teams.png') }}"
-              alt="Expert software developers, senior sde"
-            />
-      
-            <p class="benefit center-text">Senior Expertise</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/custom-solutions.png') }}"
-              alt="Custom software development, custom app development"
-            />
-      
-            <p class="benefit center-text">Custom Solutions</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/proven-process.png') }}"
-              alt="Tested and reliable solutions, reliable software solution"
-            />
-      
-            <p class="benefit center-text">Tested <br> &amp; Reliable</p>
-            <!-- <p class="benefit center-text">Proven Processes</p> -->
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/efficient-execution.png') }}"
-              alt="Scalable software solutions, business growth, seamless development, efficient execution"
-            />
-      
-            <p class="benefit center-text">Efficient Execution</p>
-          </div>
-      
-        </div>
-      </section>
-
-      <section class="section--services-our-services">
-        <div class="container center-text">
-          <h2 class="heading-secondary">Our Services</h2>
-        </div>
-
-        <div class="container grid grid--2-cols">
-          <!-- Software Development -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Software Development</p>
-              
-              <p class="service-description">
-                Build scalable, high-performance software tailored to your business needs. From enterprise solutions to custom applications, we turn ideas into secure, future-ready software.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-    
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/software-development.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-          
-          <!-- Web Design -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Web Designing</p>
-              
-              <p class="service-description">
-                Captivate users with sleek, intuitive designs. We create visually stunning, responsive websites that enhance brand identity and deliver seamless user experiences.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/web-design.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-          
-          <!-- Web Development -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Web Development</p>
-              
-              <p class="service-description">
-                Robust, fast, and secure web applications built for growth. Leveraging modern frameworks, we develop dynamic sites that perform across all devices and platforms.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/web-development.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-          
-          <!-- Mobile Application Development -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Android Development</p>
-              
-              <p class="service-description">
-                Powerful, user-friendly Android apps that drive engagement. We craft scalable mobile solutions with flawless performance, from concept to Play Store launch.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/mobile-development.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-          
-          <!-- Digital Marketing & SEO -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Digital Marketing & SEO</p>
-              
-              <p class="service-description">
-                Boost visibility, traffic, and conversions with data-driven strategies. Our tailored SEO and marketing campaigns put your brand in front of the right audience.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/digital-marketing.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-          
-          <!-- Ecommerce Development -->
-          <div class="services--service">
-            
-            <div class="service-content">
-              <p class="service-heading">Ecommerce Development</p>
-              
-              <p class="service-description">
-                Turn your store into a revenue engine. We build fast, secure eCommerce platforms with seamless checkout, payment integration, and scalability for growth.
-                <!-- Breathe life into your imagination with our bespoke visual solutions, brand identity, and collateral creation. -->
-              </p>
-
-              <div class="service--cta">
-                <a href="#" class="nebtn">Let's discuss &rarr;</a>
-                <a href="#" class="nebtn">Learn more</a>
-              </div>
-            </div>
-            
-            <img
-              class="service-img"
-              src="{{ url_for('static', filename='images/ecommerce-development.png') }}"
-              alt="Web Design, web designing, UX/UI"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="section--services-why-choose-us">
-        <div class="container center-text">
-          <h2 class="heading-secondary">Why Choose Ascent Infosoft?</h2>
-        </div>
-
-        <div class="container grid grid--6-cols">
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/project-launch.png') }}"
-              alt="On time launch, software products, software development"
-            />
-      
-            <p class="benefit center-text">On - Time Launch</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/partnership.png') }}"
-              alt="Trusted partner, company partnership"
-            />
-      
-            <p class="benefit center-text">Trusted Partner</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/expert-teams.png') }}"
-              alt="Expert software developers, senior sde"
-            />
-      
-            <p class="benefit center-text">Senior Expertise</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/custom-solutions.png') }}"
-              alt="Custom software development, custom app development"
-            />
-      
-            <p class="benefit center-text">Custom Solutions</p>
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/proven-process.png') }}"
-              alt="Tested and reliable solutions, reliable software solution"
-            />
-      
-            <p class="benefit center-text">Tested <br> &amp; Reliable</p>
-            <!-- <p class="benefit center-text">Proven Processes</p> -->
-          </div>
-      
-          <div class="benefits">
-            <img
-              class="benefit-icon"
-              src="{{ url_for('static', filename='images/icons/efficient-execution.png') }}"
-              alt="Scalable software solutions, business growth, seamless development, efficient execution"
-            />
-      
-            <p class="benefit center-text">Efficient Execution</p>
-          </div>
-      
-        </div>
-      </section>
-
-      <section class="section--connect-with-us">
-        <div>
-          <div>
-            <h2 class="heading-tertiary center-text">Seeking tailor-made software solutions to drive your business forward?</h2>
-          </div>
-      
-          <div class="center-text">
-            <a href="#" class="btn btn--form">Connect with our team!</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container grid grid--footer">
-        <div class="logo-col">
-          <a class="footer-logo" href="#">
-            <img class="logo" src="{{ url_for('static', filename='images/ascent_logo1.png') }}" alt="Ascent Infosoft logo" />
-          </a>
-
-          <p class="footer-company-description">
-            Ascent Infosoft is your one-stop destination for comprehensive
-            software development, web design, and app development solutions. As
-            a leading IT company, we deliver growth to our clients by utilizing
-            modern tools, diverse operating systems, and innovative
-            methodologies. Our goal-oriented and highly functional apps drive
-            success and scalability.
-          </p>
-
-          <ul class="social-links">
-            <li>
-              <a class="footer-link" href="#">
-                <ion-icon
-                  class="footer-social-icon"
-                  name="logo-instagram"
-                >
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a class="footer-link" href="#">
-                <ion-icon
-                  class="footer-social-icon"
-                  name="logo-facebook"
-                >
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a class="footer-link" href="#">
-                <ion-icon
-                  class="footer-social-icon"
-                  name="logo-twitter"
-                >
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a class="footer-link" href="#">
-                <ion-icon
-                  class="footer-social-icon"
-                  name="logo-linkedin"
-                >
-                </ion-icon>
-              </a>
-            </li>
+      <ul class="mobile-nav-list">
+        <li class="mobile-item"><a href="{{ url_for('index') }}">Home</a></li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('services') }}">Services</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('software_development') }}">Software Development</a></li>
+            <li><a href="{{ url_for('web_development') }}">Web Development</a></li>
+            <li><a href="{{ url_for('web_designing') }}">Web Designing</a></li>
+            <li><a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a></li>
+            <li><a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a></li>
+            <li><a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a></li>
           </ul>
-        </div>
-
-        <nav class="nav-col">
-          <p class="footer-heading">Our Services</p>
-
-          <ul class="footer-nav">
-            <li><a class="footer-link" href="#">Web Design</a></li>
-            <li><a class="footer-link" href="#">Web Development</a></li>
-            <li><a class="footer-link" href="#">Software Development</a></li>
-            <li><a class="footer-link" href="#">Mobile App Development</a></li>
-            <li><a class="footer-link" href="#">Digital Marketing & SEO</a></li>
-            <li><a class="footer-link" href="#">Ecommerce Development</a></li>
+        </li>
+        
+        <li class="mobile-item dropdown-toggle">
+          <a href="{{ url_for('products') }}">Products</a>
+          <span class="arrow"><ion-icon name="caret-down-outline"></ion-icon></span>
+          <ul class="submenu">
+            <li><a href="{{ url_for('hms') }}">Hospital Management System</a></li>
+            <li><a href="{{ url_for('cms') }}">College Management System</a></li>
+            <li><a href="{{ url_for('crm') }}">Customer Relationship Management</a></li>
+            <li><a href="{{ url_for('lms') }}">Leave Management System</a></li>
           </ul>
-        </nav>
+        </li>
+        
+        <li class="mobile-item"><a href="{{ url_for('about') }}">About Us</a></li>
+        <li class="mobile-item"><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+    </div>
 
-        <nav class="nav-col">
-          <p class="footer-heading">Quick Links</p>
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li>
+          <a href="{{ url_for('index') }}" class="main-nav-link">Home</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('services') }}" class="main-nav-link">Services</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('software_development') }}">Software Development</a>
+            <a href="{{ url_for('web_development') }}">Web Development</a>
+            <a href="{{ url_for('web_designing') }}">Web Designing</a>
+            <a href="{{ url_for('mobile_application_development') }}">Mobile Application Development</a>
+            <a href="{{ url_for('digital_marketing') }}">Digital Marketing & SEO</a>
+            <a href="{{ url_for('ecommerce_development') }}">Ecommerce Development</a>
+          </div>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+          <div class="dropdown-menu">
+            <a href="{{ url_for('hms') }}">Hospital Management System</a>
+            <a href="{{ url_for('cms') }}">College Management System</a>
+            <a href="{{ url_for('crm') }}">Customer Relationship Management</a>
+            <a href="{{ url_for('lms') }}">Leave Management System</a>
+            <!-- <a href="{{ url_for('sm') }}">Store Management System</a> -->
+          </div>
+        </li>
+        
+        <!-- <li>
+          <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+        </li> -->
+        <li>
+          <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
+        </li>
+        <li>
+          <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-          <ul class="footer-nav">
-            <li>
-              <a class="footer-link" href="{{ url_for('index') }}">Home</a>
-            </li>
-            <li>
-              <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
-            </li>
-            <li>
-              <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-            </li>
-            <li>
-              <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
-            </li>
-            <li>
-              <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
+  <div class="service-hero">
+    <h1 class="heading-primary white-font">
+      Innovate. Build. Scale.
+      <br>
+      <span>Your Software Partner for Success.</span>
+    </h1>
+  
+    <p class="white-font hero-description">
+      From custom software development to seamless integrations and cutting-edge
+      <br>
+      solutions, we empower businesses with technology that drives growth
+      <br>
+      and efficiency. Our expert team transforms ideas into scalable,
+      <br>
+      high-performance software tailored to your unique needs.
+    </p>
+  </div>
+</section>
 
-        <div class="contact-col">
-          <p class="footer-heading">Contact Us</p>
+<section class="section--services-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Ascent Infosoft?</h2>
+  </div>
 
-          <address class="contacts">
-            <p class="footer-flex">
-              <ion-icon class="contact-icon" name="location-outline"></ion-icon>
-              <a class="footer-link" href="#">
-                Aurangabad, Maharashtra, India - 431001
-              </a>
-            </p>
+  <div class="container grid grid--6-cols">
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/project-launch.png') }}"
+        alt="On time launch, software products, software development"
+      />
 
-            <p class="footer-flex">
-              <ion-icon class="contact-icon" name="call-outline"></ion-icon>
-              <a class="footer-link" href="tel:+91-9373344880">
-                +91 9373344880
-              </a>
-            </p>
+      <p class="benefit center-text">On - Time<br> Launch</p>
+    </div>
 
-            <p class="footer-flex">
-              <ion-icon class="contact-icon" name="mail-outline"></ion-icon>
-              <a class="footer-link" href="mailto:ascentinfosoft@gmail.com">
-                ascentinfosoft@gmail.com
-              </a>
-            </p>
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/partnership.png') }}"
+        alt="Trusted partner, company partnership"
+      />
 
-            <p class="footer-flex">
-              <ion-icon class="contact-icon" name="earth-outline"></ion-icon>
-              <a class="footer-link" href="https://ascentinfosoft.com/">
-                www.ascentinfosoft.com
-              </a>
-            </p>
-          </address>
+      <p class="benefit center-text">Trusted<br> Partner</p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/expert-teams.png') }}"
+        alt="Expert software developers, senior software developers"
+      />
+
+      <p class="benefit center-text">Senior<br> Expertise</p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/custom-solutions.png') }}"
+        alt="Custom software development, custom application development"
+      />
+
+      <p class="benefit center-text">Custom<br> Solutions</p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/proven-process.png') }}"
+        alt="Tested and reliable solutions, reliable software solution"
+      />
+
+      <p class="benefit center-text">Tested <br> &amp; Reliable</p>
+    </div>
+
+    <div class="benefits">
+      <img
+        class="benefit-icon"
+        src="{{ url_for('static', filename='images/icons/efficient-execution.png') }}"
+        alt="Scalable software solutions, business growth, seamless development, efficient execution"
+      />
+
+      <p class="benefit center-text">Efficient<br> Execution</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--services-our-services">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Our Services</h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- Software Development -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Software Development</p>
+        
+        <p class="service-description">
+          Build scalable, high-performance software tailored to your business needs. From enterprise solutions to custom applications, we turn ideas into secure, future-ready software.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('software_development') }}" class="service-btn">Learn more</a>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/software-development.png') }}"
+        alt="Software Development, customized software development, customized softwares"
+      />
+    </div>
+    
+    <!-- Web Design -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Web Designing</p>
+        
+        <p class="service-description">
+          Captivate users with sleek, intuitive designs. We create visually stunning, responsive websites that enhance brand identity and deliver seamless user experiences, bringing your ideas to life.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('web_designing') }}" class="service-btn">Learn more</a>
+        </div>
+      </div>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/web-design.png') }}"
+        alt="Web Design, web designing, UI/UX"
+      />
+    </div>
+    
+    <!-- Web Development -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Web Development</p>
+        
+        <p class="service-description">
+          Robust, fast, and secure web applications built for growth. Leveraging modern frameworks, we develop dynamic sites that perform across all devices and platforms.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('web_development') }}" class="service-btn">Learn more</a>
+        </div>
+      </div>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/web-development.png') }}"
+        alt="Web Development, websites, web applications"
+      />
+    </div>
+    
+    <!-- Mobile Application Development -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Android Development</p>
+        
+        <p class="service-description">
+          Powerful, user-friendly Android apps that drive engagement. We craft scalable mobile solutions with flawless performance, from concept to Play Store launch.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('mobile_application_development') }}" class="service-btn">Learn more</a>
+        </div>
+      </div>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/mobile-development.png') }}"
+        alt="Mobile Application Development, Android Development, mobile apps"
+      />
+    </div>
+    
+    <!-- Digital Marketing & SEO -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Digital Marketing & SEO</p>
+        
+        <p class="service-description">
+          Boost visibility, traffic, and conversions with data-driven strategies. Our tailored SEO and marketing campaigns put your brand in front of the right audience.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('digital_marketing') }}" class="service-btn">Learn more</a>
+        </div>
+      </div>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/digital-marketing.png') }}"
+        alt="Digital Marketing, SEO, Search Engine Optimization"
+      />
+    </div>
+    
+    <!-- Ecommerce Development -->
+    <div class="services--service">
+      
+      <div class="service-content">
+        <p class="service-heading">Ecommerce Development</p>
+        
+        <p class="service-description">
+          Turn your store into a revenue engine. We build fast, efficient, secure eCommerce platforms with seamless checkout, payment integration, and scalability for growth.
+        </p>
+
+        <div class="service--cta">
+          <a href="{{ url_for('contact') }}" class="service-btn">Let's discuss &rarr;</a>
+          <a href="{{ url_for('ecommerce_development') }}" class="service-btn">Learn more</a>
+        </div>
+      </div>
+      
+      <img
+        class="service-img"
+        src="{{ url_for('static', filename='images/ecommerce-development.png') }}"
+        alt="Ecommerce Development, Ecommerce, Business"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section--connect-with-us">
+  <div>
+    <div>
+      <h2 class="heading-tertiary center-text">Seeking tailor-made software solutions to drive your business forward?</h2>
+    </div>
+
+    <div class="center-text">
+      <a href="{{ url_for('contact') }}" class="btn btn--form">Connect with our team!</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+
+{% endblock %}

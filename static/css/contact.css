@@ -1,16 +1,15 @@
-body {
-  background-image: url(../images/about-us/bg_header.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
-.contact {
-  grid-template-columns: 1fr;
-  align-items: start;
-}
-
 .section--contact-heading {
-  padding: 9.6rem 0 2.4rem 0;
+  position: relative;
+  background-image: url(../images/about-us/bg_header1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 19.2rem 9.6rem 9.6rem 9.6rem;
+}
+
+.section--contact-heading .container {
+  padding: 0;
+  margin: 0;
 }
 
 .contact--heading {
@@ -22,16 +21,22 @@ body {
   font-size: 2.2rem;
 }
 
+.contact {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
 .contact-form {
   grid-template-columns: 1fr 1fr;
   gap: 2.4rem;
 }
 
-.contact-form div:last-child {
+.contact-form div:nth-last-child(2) {
   grid-column: 1 / -1;
 }
 
 .submit-btn {
-  padding: 3.2rem;
+  padding: 2.4rem;
   padding-bottom: 1.2rem;
+  grid-column: span 2;
 }

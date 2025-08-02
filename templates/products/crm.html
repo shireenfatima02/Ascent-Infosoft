@@ -2,10 +2,9 @@
 
 
 {% block css %}
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/hms.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
+
 {% endblock %}
 
 
@@ -13,6 +12,11 @@
 
 <section class="section--product-hero">
   <div class="product-hero center-text">
+    <img
+      src="{{ url_for('static', filename='images/products/crm-icon.png') }}"
+      alt="CRM, customer relationship management software, Ascent Infosoft"
+    />
+
     <h1 class="heading-primary">CRM</h1>
 
     <h2 class="heading-primary">
@@ -42,22 +46,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Centralized lead capture from all channels.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Automated lead scoring and prioritization.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Visual sales pipeline tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Lead assignment and follow-up reminders.</p>
-          </li>
+          <li>Centralized lead capture from all channels.</li>
+          <li>Automated lead scoring and prioritization.</li>
+          <li>Visual sales pipeline tracking.</li>
+          <li>Lead assignment and follow-up reminders.</li>
         </ul>
       </div>
     </div>
@@ -68,22 +60,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>360° customer profiles with interaction history.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Relationship mapping (hierarchies/groups).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Custom tags and segmentation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Bulk contact import/export.</p>
-          </li>
+          <li>360° customer profiles with interaction history.</li>
+          <li>Relationship mapping (hierarchies/groups).</li>
+          <li>Custom tags and segmentation.</li>
+          <li>Bulk contact import/export.</li>
         </ul>
       </div>
     </div>
@@ -94,22 +74,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Opportunity tracking with win probability.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Quote and proposal generation.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Email templates and sequences.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Sales forecasting and reporting.</p>
-          </li>
+          <li>Opportunity tracking with win probability.</li>
+          <li>Quote and proposal generation.</li>
+          <li>Email templates and sequences.</li>
+          <li>Sales forecasting and reporting.</li>
         </ul>
       </div>
     </div>
@@ -120,22 +88,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Case/ticket management system.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Knowledge base integration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>SLA and escalation rules.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Customer satisfaction surveys.</p>
-          </li>
+          <li>Case/ticket management system.</li>
+          <li>Knowledge base integration.</li>
+          <li>SLA and escalation rules.</li>
+          <li>Customer satisfaction surveys.</li>
         </ul>
       </div>
     </div>
@@ -146,22 +102,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Shared team calendar.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Meeting scheduling.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Call logging and recording.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Task assignment and tracking.</p>
-          </li>
+          <li>Shared team calendar.</li>
+          <li>Meeting scheduling.</li>
+          <li>Call logging and recording.</li>
+          <li>Task assignment and tracking.</li>
         </ul>
       </div>
     </div>
@@ -172,22 +116,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Custom dashboard builder.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Real-time sales performance metrics.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Conversion rate tracking.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Exportable reports (PDF/Excel/CSV).</p>
-          </li>
+          <li>Custom dashboard builder.</li>
+          <li>Real-time sales performance metrics.</li>
+          <li>Conversion rate tracking.</li>
+          <li>Exportable reports (PDF/Excel/CSV).</li>
         </ul>
       </div>
     </div>
@@ -199,22 +131,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Full-featured mobile apps (iOS/Android).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Offline access with cloud sync.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Location-based services.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Mobile document signing.</p>
-          </li>
+          <li>Full-featured mobile apps (iOS/Android).</li>
+          <li>Offline access with cloud sync.</li>
+          <li>Location-based services.</li>
+          <li>Mobile document signing.</li>
         </ul>
       </div>
     </div>
@@ -225,22 +145,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Email (Gmail/Outlook) integration.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Calendar sync (Google/Office 365).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Payment gateway connections.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>1000+ apps via Zapier.</p>
-          </li>
+          <li>Email (Gmail/Outlook) integration.</li>
+          <li>Calendar sync (Google/Office 365).</li>
+          <li>Payment gateway connections.</li>
+          <li>1000+ apps via Zapier.</li>
         </ul>
       </div>
     </div>
@@ -251,22 +159,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Role-based permissions.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Data encryption (in transit/at rest).</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Audit logs and version history.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>GDPR/CCPA compliance tools.</p>
-          </li>
+          <li>Role-based permissions.</li>
+          <li>Data encryption (in transit/at rest).</li>
+          <li>Audit logs and version history.</li>
+          <li>GDPR/CCPA compliance tools.</li>
         </ul>
       </div>
     </div>
@@ -277,22 +173,10 @@
       </div>
       <div class="feature-details">
         <ul>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Predictive lead scoring.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Next-best-action recommendations.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Sentiment analysis.</p>
-          </li>
-          <li>
-            <!-- <ion-icon class="ioicon" name="checkmark-outline"></ion-icon> -->
-            <p>Churn risk alerts.</p>
-          </li>
+          <li>Predictive lead scoring.</li>
+          <li>Next-best-action recommendations.</li>
+          <li>Sentiment analysis.</li>
+          <li>Churn risk alerts.</li>
         </ul>
       </div>
     </div>
@@ -324,13 +208,13 @@
 
   <div class="product-contact">
     <div>
-      <a href="#" class="btn btn--form">Schedule a Demo!</a>
+      <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
       <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
       <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
     </div>
   </div>
 
-  <div class="last-p center-text">
+  <div class="connect-tagline center-text">
     <p>Start transforming customer relationships today!</p>
   </div>
 </section>
@@ -351,9 +235,6 @@
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('products') }}">Products</a>
-</li>
-<li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>

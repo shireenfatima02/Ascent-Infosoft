@@ -1,19 +1,35 @@
+/* 1px solid rgba(57,70,99,.502) */
+
 .section--product-hero {
   padding: 7.2rem;
 }
 
 .section--product-hero img {
   width: 10rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.section--product-hero h1 {
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+}
+
+.section--product-hero h2 {
+  font-weight: 400;
 }
 
 .product-tagline {
+  color: #333;
   font-size: 2rem;
   margin-bottom: 3.2rem;
 }
 
 .section--product-features {
-  padding: 7.2rem;
+  padding: 7.2rem 0;
+}
+
+.feature-cards {
+  margin-bottom: 4.8rem;
 }
 
 .features {
@@ -38,13 +54,9 @@
 }
 
 .heading-tertiary {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   margin-bottom: 1.2rem;
-  font-weight: 300;
-}
-
-.small-heading {
-  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .feature-details {
@@ -53,20 +65,19 @@
 }
 
 .feature-details li {
-  list-style: none;
-  margin: 0 0 1.2rem 0;
-  display: flex;
-  gap: 1rem;
+  margin: 0 0 1.2rem 2.4rem;
 }
 
-.ioicon {
-  width: 3rem;
-  height: 3rem;
-  color: darkmagenta;
+.feature-details .subdetail {
+  margin: 0 0 0.8rem 4.2rem;
 }
 
-.feature-details p {
-  margin-top: 0.2rem;
+.subdetails-group .subdetail:first-child {
+  margin-top: -0.8rem;
+}
+
+.subdetails-group .subdetail:last-child {
+  margin-bottom: 1.2rem;
 }
 
 .section--product-benefits {
@@ -77,28 +88,22 @@
 
 .section--product-benefits h2 {
   font-style: italic;
+  font-size: 3.2rem;
+  font-weight: 400;
 }
 
 .benefit-details p {
   font-size: 2.4rem;
-  margin-top: 4.8rem;
+  margin: 4.8rem 0 1.8rem 0;
 }
 
 .benefit-details li {
   font-size: 1.8rem;
   margin: 1.2rem 0 0 2.4rem;
-  /* text-transform: uppercase; */
 }
 
 .section--product-connect {
   padding: 9.6rem;
-}
-
-.flexbox {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1.8rem;
-  justify-content: space-around;
 }
 
 .subheading {
@@ -107,7 +112,7 @@
   letter-spacing: 0.75px;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2.4rem;
   display: block;
 }
 
@@ -119,7 +124,7 @@
   margin-top: 3.2rem;
 }
 
-.last-p {
-  margin-top: 4.8rem;
+.connect-tagline {
+  margin-top: 4.2rem;
   font-size: 2.4rem;
 }

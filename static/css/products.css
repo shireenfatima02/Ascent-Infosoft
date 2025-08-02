@@ -1,0 +1,146 @@
+.section--services {
+  position: relative;
+  background-image: url(../images/products/products-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 19.2rem 9.6rem 9.6rem 9.6rem;
+  color: #000;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  color: #333;
+}
+
+.heading-primary {
+  font-size: 6.5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.9;
+  margin-top: 2.4rem;
+  margin-bottom: 5.4rem;
+}
+
+span {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin-right: 23.5rem;
+}
+
+.section--products-portfolio {
+  padding: 9.6rem 0;
+}
+
+.product {
+  height: 30rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 1.1rem;
+  margin-bottom: 4.8rem;
+  overflow: hidden;
+
+  display: flex;
+}
+
+.product:last-child {
+  margin-bottom: 0;
+}
+
+.product-img {
+  width: 38%;
+}
+
+.product-content {
+  padding: 4.8rem;
+}
+
+.product-heading {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+
+.product-description {
+  font-size: 1.7rem;
+  text-align: justify;
+  line-height: 1.2;
+  margin-right: 4.2rem;
+  margin-bottom: 2rem;
+}
+
+.product-links {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.product-content a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+
+.product-links a:hover {
+  color: rgb(0, 84, 209);
+}
+
+.more-prodcts {
+  padding-top: 9.6rem;
+  font-style: italic;
+}
+
+.more-prodcts p {
+  font-size: 3.2rem;
+}
+
+.section--products-why-choose-us {
+  padding: 7.2rem 0;
+  background-color: #f3f8ff;
+}
+
+.benefits {
+  grid-column: span 2;
+}
+
+.benefits:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.service-description {
+  text-align: center;
+}
+
+.section--products-custom-sd {
+  padding: 9.6rem 0;
+}
+
+.section--products-custom-sd h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.custom-sd-content {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-bottom: 3.2rem;
+}
+
+.section--products-custom-sd a {
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.section--products-custom-sd a:hover {
+  color: rgb(0, 84, 209);
+}
+
+span {
+  font-size: 2.8rem;
+  margin-left: 4px;
+}

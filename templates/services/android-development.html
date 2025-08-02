@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+
+
+{% block css %}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="section-hero">
+  <div class="hero">
+    <div class="hero-text-box">
+      <h1 class="heading-primary">
+        Mobile App Development Services
+        <br>
+        <span>Powerful, Scalable Mobile Apps That Drive Engagement and Growth</span>
+      </h1>
+
+      <p class="hero-description">
+        Transform your ideas into intuitive, high-performance mobile experiences.
+        We specialize in custom mobile app development that delivers seamless
+        functionality, stunning design, and measurable business results across
+        iOS and Android platforms.
+      </p>
+    </div>
+
+    <div class="hero-img-box">
+      <picture>
+        <img
+          class="hero-img"
+          src="{{ url_for('static', filename='images/services/android-development.png') }}"
+          alt="Ascent Infosoft, mobile application development, android development services, Aurangabad"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-why-choose-us">
+  <div class="container center-text">
+    <h2 class="heading-secondary">Why Choose Our Mobile App Development Services</h2>
+  </div>
+
+  <div class="container grid grid--6-cols">
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/cross-platform.png') }}"
+        alt="Cross platform expertise"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Cross-Platform Expertise</p>
+        
+        <p class="benefit-description">
+          Flawless performance with Swift, Kotlin or React Native.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/custom-designs.png') }}"
+        alt="User centric design"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">User-Centric Design</p>
+        
+        <p class="benefit-description">
+          Intuitive UX/UI that boosts retention and conversions.
+        </p>
+      </div>
+    </div>
+  
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/scalable-softwares.png') }}"
+        alt="Scalable architecture"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Scalable Architecture</p>
+        
+        <p class="benefit-description">
+          Future-proof apps built to handle growth.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/testing.png') }}"
+        alt="Rigorous testing of applications"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Rigorous Testing</p>
+        
+        <p class="benefit-description">
+          Comprehensive QA across 100+ devices and OS versions.
+        </p>
+      </div>
+    </div>
+
+    <div class="service--why-us">
+      <img
+        class="benefit-img"
+        src="{{ url_for('static', filename='images/icons/services/support.png') }}"
+        alt="Post launch support"
+      />
+
+      <div class="benefit-content">
+        <p class="benefit-heading">Post-Launch Support</p>
+        
+        <p class="benefit-description">
+          Ongoing maintenance and feature updates.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-expertise">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our Mobile Development Expertise
+    </h2>
+  </div>
+
+  <div class="container grid grid--2-cols">
+    <!-- 01 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">01</p>
+
+      <h3 class="heading-tertiary">
+        iOS App Development
+      </h3>
+
+      <p class="expertise-description">
+        Premium native apps built with Swift and SwiftUI for superior Apple ecosystem performance.
+      </p>
+    </div>
+
+    <!-- 02 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">02</p>
+
+      <h3 class="heading-tertiary">
+        Android App Development
+      </h3>
+
+      <p class="expertise-description">
+        High-performance Android solutions using Kotlin and Jetpack Compose.
+      </p>
+    </div>
+
+    <!-- 03 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">03</p>
+
+      <h3 class="heading-tertiary">
+        Cross-Platform Development
+      </h3>
+
+      <p class="expertise-description">
+        Cost-efficient React Native and Flutter apps with native-like quality.
+      </p>
+    </div>
+
+    <!-- 04 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">04</p>
+
+      <h3 class="heading-tertiary">
+        Enterprise Mobility Solutions
+      </h3>
+
+      <p class="expertise-description">
+        Secure business apps with offline sync, biometric auth, and MDM integration.
+      </p>
+    </div>
+
+    <!-- 05 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">05</p>
+
+      <h3 class="heading-tertiary">
+        IoT & Wearable Apps
+      </h3>
+
+      <p class="expertise-description">
+        Connected experiences for smart devices, watches, and AR/VR platforms.
+      </p>
+    </div>
+
+    <!-- 06 -->
+    <div class="expertise-text-box">
+      <p class="expertise-number">06</p>
+
+      <h3 class="heading-tertiary">
+        App Modernization
+      </h3>
+
+      <p class="expertise-description">
+        Rebuild or upgrade legacy apps with modern frameworks and cloud integration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-development-process">
+  <div class="container">
+    <h2 class="heading-secondary">
+      Our App Development Process
+    </h2>
+  </div>
+
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-bullseye"></i>
+          <h3>Strategy Workshop</h3>
+        </div>
+        <p class="step-description">Define goals, features, and success metrics.</p>
+      </div>
+    </div>
+    
+    <!-- Step 2 -->
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>UX/UI Design</h3>
+        </div>
+        <p class="step-description">Create intuitive user flows and stunning interfaces.</p>
+      </div>
+    </div>
+    
+    <!-- Step 3 -->
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-code-branch"></i>
+          <h3>Agile Development</h3>
+        </div>
+        <p class="step-description">2-week sprints with continuous testing.</p>
+      </div>
+    </div>
+    
+    <!-- Step 4 -->
+    <div class="step">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-vial"></i>
+          <h3>Quality Assurance</h3>
+        </div>
+        <p class="step-description">Automated + manual testing across devices.</p>
+      </div>
+    </div>
+    
+    <!-- Step 5 -->
+    <div class="step">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>App Store Deployment</h3>
+        </div>
+        <p class="step-description">Complete submission support for Play Store/App Store.</p>
+      </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="step">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <div class="step-title">
+          <i class="fas fa-chart-line"></i>
+          <h3>Performance Monitoring</h3>
+        </div>
+        <p class="step-description">Real-time analytics and optimization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--service-connect">
+  <div class="container center-text">
+    <h2 class="heading-tertiary">Let's Build Your Next Breakthrough App</h2>
+    
+    <p class="connect-content">
+      From concept to launch, we deliver mobile experiences users love and businesses trust.
+      <br>
+      Get a free consultation with our app strategy experts.
+    </p>
+
+    <a class="connect-link" href="{{ url_for('contact') }}">Get Started Now!</a>
+  </div>
+</section>
+
+{% endblock %}
+
+
+{% block footer_quick_links %}
+
+<li>
+  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+</li>
+
+{% endblock %}
