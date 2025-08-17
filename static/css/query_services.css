@@ -115,5 +115,66 @@
 /* 38em = 608px */
 
 /* 528 45 */
+
 /* 472 40 */
-/* 416 35 */
+@media (max-width: 29.5em) {
+  html {
+    font-size: 40%;
+  }
+
+  .heading-primary {
+    font-size: 7.8rem;
+  }
+
+  .service-hero > h1 > p {
+    line-height: 1.4;
+    font-size: 4.2rem;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-description {
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+
+  .grid--6-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section--services-our-services {
+    padding: 6.6rem 0;
+  }
+
+  .services--service {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .service-content {
+    margin: 0;
+  }
+
+  .service-img {
+    order: -1;
+  }
+
+  .service-heading {
+    font-size: 3.2rem;
+  }
+
+  .service--cta {
+    gap: 1.5rem;
+  }
+
+  .service-description,
+  .service-btn {
+    font-size: 2.2rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.8rem;
+  }
+}

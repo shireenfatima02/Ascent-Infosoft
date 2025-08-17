@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_products_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Homoeopathic Hospital Management System - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -226,13 +232,15 @@
 
   <div class="container benefit-details">
     <p>HomoeoSoft helps you:</p>
-    <li>Digitize operations.</li>
-    <li>Enhance patient satisfaction.</li>
-    <li>Reduce paperwork by 70%.</li>
-    <li>Reduce administrative overheads by up to 60%.</li>
-    <li>Improve patient turnaround time by 40%.</li>
-    <li>Ensure compliance with CCRH, NABH, and WHO standards.</li>
-    <!-- <li>Enhance data security and accessibility with cloud-powered infrastructure.</li> -->
+    <ul>
+      <li>Digitize operations.</li>
+      <li>Enhance patient satisfaction.</li>
+      <li>Reduce paperwork by 70%.</li>
+      <li>Reduce administrative overheads by up to 60%.</li>
+      <li>Improve patient turnaround time by 40%.</li>
+      <li>Ensure compliance with CCRH, NABH, and WHO standards.</li>
+      <!-- <li>Enhance data security and accessibility with cloud-powered infrastructure.</li> -->
+    </ul>
   </div>
 </section>
 
@@ -246,8 +254,8 @@
   <div class="product-contact">
     <div>
       <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
-      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
-      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+      <a href="tel:+91-9373344880" class="btn btn--form">Call Us: +91 937-33-44-880</a>
+      <a href="mailto:aamir.m@ascentinfosoft.com" class="btn btn--form">Email: aamir.m@ascentinfosoft.com</a>
     </div>
   </div>
 

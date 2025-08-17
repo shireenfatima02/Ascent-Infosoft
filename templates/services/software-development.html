@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+  
+  
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Expert Custom Software Development Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         Software Development Services
         <br>
-        <span>Build Scalable, High-Performance Software Tailored to Your Business</span>
+        <p>Build Scalable, High-Performance Software Tailored to Your Business</p>
       </h1>
 
       <p class="hero-description">
@@ -110,7 +114,6 @@
         </p>
       </div>
     </div>
-
 
     <div class="service--why-us">
       <img
@@ -218,7 +221,7 @@
 
       <p class="expertise-description">
         Upgrade outdated software with modern frameworks, improved UX, and cloud
-        migration—without disrupting operations.
+        migration - without disrupting operations.
       </p>
     </div>
   </div>
@@ -231,7 +234,7 @@
     </h2>
   </div>
 
-  <div class="process-steps">
+  <div class="process-steps container">
     <!-- Step 1 -->
     <div class="step">
       <div class="step-number">1</div>
@@ -300,7 +303,9 @@
     
     <p class="connect-content">
       From concept to deployment, we deliver high-quality software that aligns with your business goals.
-      <br>
+    </p>
+
+    <p class="connect-content connect-content--l">
       Get a free consultation to discuss your project requirements and timeline.
     </p>
 
@@ -317,7 +322,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

@@ -1,0 +1,115 @@
+@media (max-width: 29.5em) {
+  html {
+    font-size: 40%;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .hero-text-box > h1 > p {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    margin-top: 2.8rem;
+  }
+
+  .grid--6-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-heading {
+    font-size: 2.8rem;
+  }
+
+  .benefit-description {
+    font-size: 2.2rem;
+  }
+
+  .service--why-us:nth-child(4),
+  .service--why-us:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  .expertise-number {
+    margin-bottom: 1.8rem;
+  }
+
+  .heading-tertiary {
+    font-size: 3.5rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .expertise-description {
+    font-size: 2.5rem;
+  }
+
+  .expertise-text-box {
+    grid-row: span 1;
+  }
+
+  .expertise-text-box:nth-child(even) {
+    grid-column: 1;
+  }
+
+  .expertise-text-box:nth-child(2),
+  .expertise-text-box:nth-child(3),
+  .expertise-text-box:nth-child(4),
+  .expertise-text-box:nth-child(5),
+  .expertise-text-box:nth-child(6) {
+    grid-row: auto;
+  }
+
+  .process-steps {
+    padding: 2.4rem 2.8rem;
+  }
+
+  .step {
+    flex-direction: column;
+  }
+
+  .step-content {
+    margin: 3.2rem 0;
+  }
+
+  .step-title h3 {
+    font-size: 3.2rem;
+  }
+
+  .step-description {
+    font-size: 2.4rem;
+  }
+
+  .section--service-connect {
+    padding: 6rem 0;
+  }
+
+  .section--service-connect h2 {
+    font-size: 4.2rem;
+  }
+
+  .connect-content {
+    font-size: 2.8rem;
+  }
+
+  .connect-content:first-of-type {
+    margin-bottom: 3.2rem;
+  }
+
+  .connect-content--l {
+    margin-bottom: 5.4rem;
+  }
+
+  .connect-link {
+    font-size: 3.2rem;
+  }
+
+  .step:last-child::after {
+    display: block;
+    height: 90px;
+  }
+}

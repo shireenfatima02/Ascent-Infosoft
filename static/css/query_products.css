@@ -1,0 +1,245 @@
+/* -------------------
+    BELOW 1344px (SMALLER DESKTOPS)
+   ------------------- */
+
+/* 80em = 1280px */
+@media (max-width: 80em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 72.5em = 1160px */
+@media (max-width: 72.5em) {
+  html {
+    font-size: 53.12%;
+  }
+}
+
+/* 68em = 1088px */
+@media (max-width: 68em) {
+  html {
+    font-size: 51.87%;
+  }
+
+  .heading-primary {
+    font-size: 7.2rem;
+  }
+
+  span {
+    font-size: 5.8rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+    margin-right: 20rem;
+  }
+
+  .benefit-icon {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+}
+
+/* 58em = 928px */
+@media (max-width: 58em) {
+  html {
+    font-size: 50%;
+  }
+
+  .section--services {
+    padding: 19.2rem 6.6rem 9.6rem 6.6rem;
+  }
+
+  .grid--6-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 55em = 880px */
+@media (max-width: 55em) {
+  .section--services {
+    padding: 19.2rem 4.8rem 9.6rem 4.8rem;
+  }
+
+  .heading-primary {
+    font-size: 6.6rem;
+  }
+
+  span {
+    font-size: 4.8rem;
+  }
+
+  .hero-description {
+    margin: 0;
+  }
+
+  .heading-secondary {
+    font-size: 4rem;
+  }
+
+  .container {
+    max-width: 100rem;
+  }
+}
+
+/* -------------------
+    BELOW 672px (SMALLER TABLETS)
+   ------------------- */
+
+/* 42em = 672px */
+@media (max-width: 42em) {
+  .heading-primary {
+    font-size: 5.4rem;
+  }
+
+  span {
+    font-size: 3.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 29.5em) {
+  html {
+    font-size: 40%;
+  }
+
+  .heading-primary {
+    font-size: 6.6rem;
+    text-align: center;
+  }
+
+  .service-hero > h1 > p {
+    line-height: 1.4;
+    font-size: 3.3rem;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-description {
+    font-size: 2.5rem;
+    text-align: justify;
+  }
+
+  .grid--6-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section--services-our-services {
+    padding: 6.6rem 0;
+  }
+
+  .services--service {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .service-content {
+    margin: 0;
+  }
+
+  .service-img {
+    order: -1;
+  }
+
+  .service-heading {
+    font-size: 3.2rem;
+  }
+
+  .service--cta {
+    gap: 1.5rem;
+  }
+
+  .service-description,
+  .service-btn {
+    font-size: 2.2rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.8rem;
+  }
+
+  .product {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .product-img {
+    width: 100%;
+    order: -1;
+  }
+
+  .product-content {
+    padding: 3.2rem 2.8rem;
+  }
+
+  .product-heading {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .product-description {
+    font-size: 2.4rem;
+    margin-right: 0;
+    margin-bottom: 2.2em;
+  }
+
+  .product-links {
+    justify-content: center;
+  }
+
+  .product-content a {
+    font-size: 2.6rem;
+  }
+
+  .grid--6-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits {
+    padding: 1.8rem;
+    grid-column: span 1;
+  }
+
+  .benefits:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .benefit {
+    font-size: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .service-description {
+    font-size: 2.5rem;
+  }
+
+  .section--products-custom-sd h2 {
+    font-size: 4.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .custom-sd-content {
+    font-size: 2.8rem;
+    margin-top: 3.2rem;
+  }
+
+  .section--products-custom-sd a {
+    font-size: 3rem;
+  }
+}

@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Digital Marketing & SEO Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         Digital Marketing & SEO Services
         <br>
-        <span>Data-Driven Strategies to Grow Your Online Visibility & Conversions</span>
+        <p>Data-Driven Strategies to Grow Your Online Visibility & Conversions</p>
       </h1>
 
       <p class="hero-description">
@@ -146,7 +150,7 @@
       </h3>
 
       <p class="expertise-description">
-        We optimize websites through technical audits, keyword research, and content strategies to improve rankings for both local and enterprise businesses.
+        We optimize websites through technical audits and content strategies to improve rankings for local and enterprise businesses.
       </p>
     </div>
 
@@ -305,7 +309,9 @@
     
     <p class="connect-content">
       Get measurable results with marketing that actually works.
-      <br>
+    </p>
+
+    <p class="connect-content connect-content--l">
       Request a free marketing audit of your current digital performance.
     </p>
 
@@ -322,7 +328,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

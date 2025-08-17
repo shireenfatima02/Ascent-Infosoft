@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_products_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}CRM Software - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -190,12 +196,14 @@
 
   <div class="container benefit-details">
     <p>CRM helps you:</p>
-    <li>Increase sales by 30% with pipeline visibility.</li>
-    <li>Boost productivity with automated workflows.</li>
-    <li>Improve retention through better customer insights.</li>
-    <li>Reduce costs by eliminating manual processes.</li>
-    <li>Scale effortlessly with cloud-based infrastructure.</li>
-    <li>Reduce sales cycles by 40% while improving customer satisfaction scores.</li>
+    <ul>
+      <li>Increase sales by 30% with pipeline visibility.</li>
+      <li>Boost productivity with automated workflows.</li>
+      <li>Improve retention through better customer insights.</li>
+      <li>Reduce costs by eliminating manual processes.</li>
+      <li>Scale effortlessly with cloud-based infrastructure.</li>
+      <li>Reduce sales cycles by 40% while improving customer satisfaction scores.</li>
+    </ul>
   </div>
 </section>
 
@@ -209,8 +217,8 @@
   <div class="product-contact">
     <div>
       <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
-      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
-      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+      <a href="tel:+91-9373344880" class="btn btn--form">Call Us: +91 937-33-44-880</a>
+      <a href="mailto:aamir.m@ascentinfosoft.com" class="btn btn--form">Email: aamir.m@ascentinfosoft.com</a>
     </div>
   </div>
 

@@ -13,10 +13,11 @@
   font-size: 3.6rem;
 }
 
-span {
+.hero-text-box > h1 > p {
   letter-spacing: 0.1px;
   font-size: 1.8rem;
   font-weight: 400;
+  margin-top: 2.4rem;
 }
 
 .hero-description {
@@ -137,7 +138,7 @@ span {
 }
 
 .process-steps {
-  padding: 1.8rem 30rem;
+  padding: 1.8rem 20rem;
 }
 
 .step {
@@ -243,6 +244,10 @@ span {
   margin-bottom: 3.2rem;
 }
 
+.connect-content:first-of-type {
+  margin-bottom: 0.6rem;
+}
+
 .connect-link {
   color: #000;
   font-size: 2.2rem;
@@ -251,4 +256,8 @@ span {
 
 .connect-link:hover {
   color: rgb(0, 84, 209);
+}
+
+.footer {
+  margin-top: 10rem;
 }

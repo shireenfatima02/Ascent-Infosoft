@@ -2,14 +2,14 @@
   position: relative;
   background-image: url(../images/about-us/bg_header1.jpg);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   padding: 19.2rem 9.6rem 9.6rem 9.6rem;
 }
 
 .section--contact-heading .container {
+  max-width: 125rem;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
 }
 
 .contact--heading {

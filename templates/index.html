@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
-  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-  
+{% block css_js %}
+  <script src="{{ url_for('static', filename='js/index.js') }}"></script>    
 {% endblock %}
+
+
+{% block title %}Ascent Infosoft - Software Development Company{% endblock %}
 
 
 {% block content %}

@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,18 +13,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block css_js %}
+    {% endblock %}
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/query.css') }}">
 
-    {% block css %}
+    {% block media_query %}
     {% endblock %}
 
-    <title>Ascent Infosoft</title>
+    <title>{% block title %}{% endblock %}</title>
   </head>
 
   <body>
@@ -215,28 +222,28 @@
           <address class="contacts">
             <p class="footer-flex">
               <ion-icon class="contact-icon" name="location-outline"></ion-icon>
-              <a class="footer-link" href="#">
-                Aurangabad, Maharashtra, India - 431001
+              <a class="footer-link" href="">
+                Aurangabad, Maharashtra, India - 431 001
               </a>
             </p>
 
             <p class="footer-flex">
               <ion-icon class="contact-icon" name="call-outline"></ion-icon>
               <a class="footer-link" href="tel:+91-9373344880">
-                +91 9373344880
+                +91 937-33-44-880
               </a>
             </p>
 
             <p class="footer-flex">
               <ion-icon class="contact-icon" name="mail-outline"></ion-icon>
-              <a class="footer-link" href="mailto:aamir@ascentinfosoft.com">
-                aamir@ascentinfosoft.com
+              <a class="footer-link" href="mailto:aamir.m@ascentinfosoft.com">
+                aamir.m@ascentinfosoft.com
               </a>
             </p>
 
             <p class="footer-flex">
               <ion-icon class="contact-icon" name="earth-outline"></ion-icon>
-              <a class="footer-link" href="https://ascentinfosoft.com/">
+              <a class="footer-link" href="https://www.ascentinfosoft.com/">
                 www.ascentinfosoft.com
               </a>
             </p>
@@ -244,5 +251,24 @@
         </div>
       </div>
     </footer>
+    
+    <!-- 
+    <footer class="footer-copyright">
+      <div>
+        <p class="copyright">
+          Copyright © <span class="year">2030</span> by Ascent Infosoft, Inc.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Get current year
+      const yearEl = document.querySelector(".year");
+      const currentYear = new Date().getFullYear();
+      console.log(currentYear);
+      yearEl.textContent = currentYear;
+    </script>
+    -->
   </body>
 </html>

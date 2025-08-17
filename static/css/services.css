@@ -23,6 +23,11 @@
   color: #333;
 }
 
+.service-hero {
+  max-width: 125rem;
+  margin: 0 auto;
+}
+
 .heading-primary {
   font-size: 8rem;
   font-weight: 600;
@@ -40,13 +45,14 @@
   color: #fff;
 }
 
-span {
+.service-hero > h1 > p {
   font-size: 7rem;
   font-weight: 400;
+  margin-top: 2.4rem;
 }
 
 .section--services-why-choose-us {
-  padding: 7.2rem;
+  padding: 7.2rem 0;
 }
 
 .benefits {
@@ -72,10 +78,6 @@ span {
 .section--services-our-services {
   padding: 9.6rem 0;
   background-color: #b6f2ff5e;
-}
-
-.section--services-our-services > .container:nth-child(2) {
-  padding: 0;
 }
 
 .grid--2-cols {

@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Mobile Application Development Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         Mobile App Development Services
         <br>
-        <span>Powerful, Scalable Mobile Apps That Drive Engagement and Growth</span>
+        <p>Powerful, Scalable Mobile Apps That Drive Engagement and Growth</p>
       </h1>
 
       <p class="hero-description">
@@ -147,7 +151,7 @@
       </h3>
 
       <p class="expertise-description">
-        Premium native apps built with Swift and SwiftUI for superior Apple ecosystem performance.
+        Premium native apps built with Swift for superior Apple ecosystem performance.
       </p>
     </div>
 
@@ -306,7 +310,9 @@
     
     <p class="connect-content">
       From concept to launch, we deliver mobile experiences users love and businesses trust.
-      <br>
+    </p>
+
+    <p class="connect-content connect-content--l">
       Get a free consultation with our app strategy experts.
     </p>
 
@@ -323,7 +329,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

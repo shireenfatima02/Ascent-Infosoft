@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Ecommerce Development Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         E-Commerce Development Services
         <br>
-        <span>Scalable Online Stores That Convert Browsers Into Buyers</span>
+        <p>Scalable Online Stores That Convert Browsers Into Buyers</p>
       </h1>
 
       <p class="hero-description">
@@ -146,7 +150,7 @@
       </h3>
 
       <p class="expertise-description">
-        We build tailored eCommerce platforms with personalized checkout flows, payment integrations, and multi-vendor marketplace capabilities.
+        We build tailored eCommerce platforms with personalized flows, payment integrations, and multi-vendor marketplace capabilities.
       </p>
     </div>
 
@@ -305,7 +309,9 @@
     
     <p class="connect-content">
       From MVP to enterprise solutions - we deliver E-Commerce platforms that grow with your business.
-      <br>
+    </p>
+    
+    <p class="connect-content connect-content--l">
       Get a free consultation with our E-Commerce strategists.
     </p>
 
@@ -322,7 +328,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

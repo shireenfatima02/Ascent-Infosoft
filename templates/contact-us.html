@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_about_contact.css') }}">
 
   <script src="{{ url_for('static', filename='js/contact-us.js') }}"></script>
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_about_contact.css') }}">
+{% endblock %}
+
+
+{% block title %}Ascent Infosoft &ndash; Contact Us{% endblock %}
 
 
 {% block content %}

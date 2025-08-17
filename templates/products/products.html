@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_products.css') }}">
+{% endblock %}
+
+
+{% block title %}Solutions by Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -111,11 +117,9 @@
     <h1 class="heading-primary">
       Ascent Infosoft Solutions
       <br>
-      <span>Powering Your Success with Integrated Business Software.</span>
+      <p>Powering Your Success with Integrated Business Software.</p>
     </h1>
-  </div>
 
-  <div>
     <p class="hero-description">
       At Ascent Infosoft, we build enterprise-grade software solutions to automate
       operations, streamline workflows, and drive growth across industries. Our comprehensive

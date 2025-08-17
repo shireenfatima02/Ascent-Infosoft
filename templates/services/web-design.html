@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Web Designing Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         Web Design Services
         <br>
-        <span>Stunning, User-Centric Designs That Convert Visitors Into Customers</span>
+        <p>Stunning, User-Centric Designs That Convert Visitors Into Customers</p>
       </h1>
 
       <p class="hero-description">
@@ -305,7 +309,9 @@
     
     <p class="connect-content">
       From concept to launch, we deliver designs that tell your brand story and drive business results.
-      <br>
+    </p>
+
+    <p class="connect-content connect-content--l">
       Get a free design consultation with our creative director.
     </p>
 
@@ -322,7 +328,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

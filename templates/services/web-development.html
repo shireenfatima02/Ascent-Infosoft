@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/services_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_services_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Custom Web Application Development Services - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -19,7 +23,7 @@
       <h1 class="heading-primary">
         Web Development Services
         <br>
-        <span>High-Performance, Scalable Websites Built for Results</span>
+        <p>High-Performance, Scalable Websites Built for Results</p>
       </h1>
 
       <p class="hero-description">
@@ -155,11 +159,11 @@
       <p class="expertise-number">02</p>
 
       <h3 class="heading-tertiary">
-        Backend Development
+        Full-Stack Web Apps
       </h3>
 
       <p class="expertise-description">
-        Robust server-side logic using Node.js, Python (Django), PHP (Laravel), or .NET Core.
+        End-to-end development with MERN (MongoDB, Express, React, Node) or Jamstack architectures.
       </p>
     </div>
 
@@ -168,11 +172,11 @@
       <p class="expertise-number">03</p>
 
       <h3 class="heading-tertiary">
-        Full-Stack Web Apps
+        Backend Development
       </h3>
 
       <p class="expertise-description">
-        End-to-end development with MERN (MongoDB, Express, React, Node) or Jamstack architectures.
+        Robust server-side logic using Node.js, Python (Django), PHP (Laravel), or .NET Core.
       </p>
     </div>
 
@@ -293,7 +297,9 @@
     
     <p class="connect-content">
       From brochure sites to complex web apps, we deliver high-performing solutions tailored to your needs.
-      <br>
+    </p>
+
+    <p class="connect-content connect-content--l">
       Get a free quote with a personalized project roadmap and timeline.
     </p>
 
@@ -310,7 +316,7 @@
   <a class="footer-link" href="{{ url_for('index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('portfolio') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
 </li>
 <li>
   <a class="footer-link" href="{{ url_for('services') }}">Services</a>

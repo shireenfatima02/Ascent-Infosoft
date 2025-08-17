@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_products_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}Leave Management Software - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -189,12 +195,14 @@
 
   <div class="container benefit-details">
     <p>LMS helps you:</p>
-    <li>Reduce administrative workload by 75%.</li>
-    <li>Eliminate payroll errors from manual leave calculations.</li>
-    <li>Improve workforce planning with real-time visibility.</li>
-    <li>Enhance employee satisfaction with transparent processes.</li>
-    <li>Ensure 100% compliance with labor regulations.</li>
-    <li>Reduce leave processing time from 3 days to 3 minutes.</li>
+    <ul>
+      <li>Reduce administrative workload by 75%.</li>
+      <li>Eliminate payroll errors from manual leave calculations.</li>
+      <li>Improve workforce planning with real-time visibility.</li>
+      <li>Enhance employee satisfaction with transparent processes.</li>
+      <li>Ensure 100% compliance with labor regulations.</li>
+      <li>Reduce leave processing time from 3 days to 3 minutes.</li>
+    </ul>
   </div>
 </section>
 
@@ -208,8 +216,8 @@
   <div class="product-contact">
     <div>
       <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
-      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
-      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+      <a href="tel:+91-9373344880" class="btn btn--form">Call Us: +91 937-33-44-880</a>
+      <a href="mailto:aamir.m@ascentinfosoft.com" class="btn btn--form">Email: aamir.m@ascentinfosoft.com</a>
     </div>
   </div>
 

@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
+{% block css_js %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/products_individual.css') }}">
-
 {% endblock %}
+
+
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_products_individual.css') }}">
+{% endblock %}
+
+
+{% block title %}College Management System - Ascent Infosoft{% endblock %}
 
 
 {% block content %}
@@ -213,11 +219,13 @@
 
   <div class="container benefit-details">
     <p>CMS helps you:</p>
-    <li>Reduce administrative workload by up to 65%.</li>
-    <li>Improve institutional efficiency by 50%.</li>
-    <li>Enhance student satisfaction and engagement.</li>
-    <li>Ensure regulatory compliance and accreditation readiness.</li>
-    <li>Secure, cloud-based infrastructure with 99.9% uptime.</li>
+    <ul>
+      <li>Reduce administrative workload by up to 65%.</li>
+      <li>Improve institutional efficiency by 50%.</li>
+      <li>Enhance student satisfaction and engagement.</li>
+      <li>Ensure regulatory compliance and accreditation readiness.</li>
+      <li>Secure, cloud-based infrastructure with 99.9% uptime.</li>
+    </ul>  
   </div>
 </section>
 
@@ -231,13 +239,13 @@
   <div class="product-contact">
     <div>
       <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
-      <a href="#" class="btn btn--form">Call Us: +91 9373344880</a>
-      <a href="#" class="btn btn--form">Email: ascentinfosoft@gmail.com</a>
+      <a href="tel:+91-9373344880" class="btn btn--form">Call Us: +91 937-33-44-880</a>
+      <a href="mailto:aamir.m@ascentinfosoft.com" class="btn btn--form">Email: aamir.m@ascentinfosoft.com</a>
     </div>
   </div>
 
   <div class="connect-tagline center-text">
-    <p>Transforming education through technology - one institution at a time.</p>
+    <p>Transforming education through technology &ndash; one institution at a time.</p>
   </div>
 </section>
 

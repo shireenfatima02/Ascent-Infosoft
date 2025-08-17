@@ -6,6 +6,8 @@
   background-repeat: no-repeat;
   padding: 19.2rem 9.6rem 9.6rem 9.6rem;
   color: #000;
+  /* max-width: 195rem;
+  margin: 0 auto; */
 }
 
 .main-nav-link:link,
@@ -22,9 +24,10 @@
   margin-bottom: 5.4rem;
 }
 
-span {
+.service-hero > h1 > p {
   font-size: 4rem;
   font-weight: 400;
+  margin-top: 2.4rem;
 }
 
 .hero-description {
@@ -143,4 +146,8 @@ span {
 span {
   font-size: 2.8rem;
   margin-left: 4px;
+}
+
+.footer {
+  margin-top: 6rem;
 }

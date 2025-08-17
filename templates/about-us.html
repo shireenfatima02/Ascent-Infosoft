@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 
 
-{% block css %}
-
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_about_contact.css') }}">
-
+{% block css_js %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}">  
 {% endblock %}
+  
+  
+{% block media_query %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/query_about_contact.css') }}">
+{% endblock %}
+
+
+{% block title %}About Ascent Infosoft - Software Development Company{% endblock %}
 
 
 {% block content %}

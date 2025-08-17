@@ -1,7 +1,9 @@
 /* 1px solid rgba(57,70,99,.502) */
 
 .section--product-hero {
-  padding: 7.2rem;
+  max-width: 125rem;
+  margin: 0 auto;
+  padding: 7.2rem 0;
 }
 
 .section--product-hero img {
@@ -82,7 +84,7 @@
 
 .section--product-benefits {
   background-color: #f3f8ff;
-  padding: 7.2rem;
+  padding: 7.2rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -103,7 +105,7 @@
 }
 
 .section--product-connect {
-  padding: 9.6rem;
+  padding: 11.4rem 0;
 }
 
 .subheading {
