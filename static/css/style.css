@@ -460,6 +460,7 @@ body {
 
 .footer {
   padding: 9.6rem 0;
+  background-color: #f1f4f7;
   border-top: 1px solid #eee;
 }
 
@@ -474,6 +475,7 @@ body {
 }
 
 .footer-company-description {
+  color: #283943;
   font-size: 1.6rem;
   line-height: 1.2;
   text-align: justify;
@@ -493,6 +495,7 @@ body {
 }
 
 .footer-heading {
+  color: #344854;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 4rem;
@@ -508,7 +511,7 @@ body {
 
 .footer-link:link,
 .footer-link:visited {
-  color: #767676;
+  color: #283943;
   text-decoration: none;
   font-size: 1.6rem;
 
@@ -517,7 +520,7 @@ body {
 
 .footer-link:hover,
 .footer-link:active {
-  color: #333;
+  color: #777;
 }
 
 .contacts {
@@ -540,13 +543,30 @@ body {
   margin-right: 0.5rem;
 }
 
-/* .footer-copyright {
-  font-size: 1.4rem;
+.footer-copyright {
   text-align: center;
+  /* padding: 1.2rem;
+  padding-bottom: 1.2rem; */
+  background-color: #f1f4f7;
+  /* border-top: 1px solid #ccd0d5; */
+}
+
+.copyright-container {
   padding: 1.2rem;
-  padding-bottom: 1.2rem;
-  border-top: 1px solid #eee;
-} */
+  /* padding-top: 2.4rem; */
+}
+
+.copyright {
+  color: #283943;
+  font-size: 1.6rem;
+}
+
+.footer-line {
+  border-top: 1px solid #ccd0d5;
+  display: block;
+  height: 0px;
+  margin: 0 50px;
+}
 
 /* -------------------
     SUBMISSION MESSAGES

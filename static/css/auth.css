@@ -1,0 +1,121 @@
+/* Auth page styles (scoped with .auth-*) */
+
+:root {
+  --auth-bg: #f7f9fc;
+  --auth-card-bg: #ffffff;
+  --auth-border: #888;
+  --auth-text: #1f2937;
+  --auth-muted: #6b7280;
+  --auth-primary: #2563eb; /* match brand blue if desired */
+  --auth-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.auth-wrapper {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem 4rem;
+  background: var(--auth-bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--auth-card-bg);
+  border-radius: 14px;
+  box-shadow: var(--auth-shadow);
+  padding: 2rem;
+}
+
+.auth-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+}
+
+.auth-brand img {
+  height: 42px;
+  width: auto;
+}
+
+.auth-title {
+  margin: 2rem 1rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--auth-text);
+}
+
+.auth-field { margin-bottom: 1rem; }
+.auth-field label {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--auth-muted);
+  margin-bottom: 0.5rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--auth-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--auth-text);
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.auth-input:focus {
+  border-color: var(--auth-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.auth-error {
+  margin-top: 0.35rem;
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0 2.4rem;
+}
+
+.auth-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--auth-muted);
+  font-size: 1.4rem;
+}
+
+.auth-link {
+  color: var(--auth-primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.auth-link:hover { text-decoration: underline; }
+
+.auth-btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+}
+
+.auth-meta {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.auth-flash { margin-bottom: 0.75rem; }
+.flash { padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 1.6rem; transition: opacity .25s ease, transform .25s ease; }
+.flash.flash--hide { opacity: 0; transform: translateY(-4px); }
+.flash.error { background: #fee2e2; color: #7f1d1d; border: 1px solid #fecaca; }
+.flash.success { background: #dcfce7; color: #14532d; border: 1px solid #bbf7d0; }
+
+@media (max-width: 520px) {
+  .auth-card { padding: 1.5rem; }
+}

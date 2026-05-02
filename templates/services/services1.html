@@ -31,13 +31,13 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="{{ url_for('index') }}" class="main-nav-link">Home</a></li>
+          <li><a href="{{ url_for('main.index') }}" class="main-nav-link">Home</a></li>
           <li>
-            <a href="{{ url_for('about') }}" class="main-nav-link">About Us</a>
+            <a href="{{ url_for('main.about') }}" class="main-nav-link">About Us</a>
           </li>
           
           <li class="dropdown">
-            <a href="{{ url_for('services') }}" class="main-nav-link dropdown-toggle">Services</a>
+            <a href="{{ url_for('main.services') }}" class="main-nav-link dropdown-toggle">Services</a>
             <ul class="dropdown-menu">
               <li><a href="software-development.html" class="dropdown-link">Software Development</a></li>
               <li><a href="web-development.html" class="dropdown-link">Web Development</a></li>
@@ -49,7 +49,7 @@
           </li>
           
           <li class="dropdown">
-            <a href="{{ url_for('products') }}" class="main-nav-link">Products</a>
+            <a href="{{ url_for('main.products') }}" class="main-nav-link">Products</a>
             <ul class="dropdown-menu">
               <li><a href="software-development.html" class="dropdown-link">Hospital Management System</a></li>
               <li><a href="web-development.html" class="dropdown-link">College Management System</a></li>
@@ -60,10 +60,10 @@
           </li>
           
           <li>
-            <a href="{{ url_for('portfolio') }}" class="main-nav-link">Portfolio</a>
+            <a href="{{ url_for('main.portfolio') }}" class="main-nav-link">Portfolio</a>
           </li>
           <li>
-            <a href="{{ url_for('contact') }}" class="main-nav-link">Contact Us</a>
+            <a href="{{ url_for('main.contact') }}" class="main-nav-link">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -193,8 +193,8 @@
               </p>
     
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('software_development') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.software_development') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -217,8 +217,8 @@
               </p>
 
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('web_designing') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.web_designing') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -241,8 +241,8 @@
               </p>
 
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('web_development') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.web_development') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -265,8 +265,8 @@
               </p>
 
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('mobile_application_development') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.mobile_application_development') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -289,8 +289,8 @@
               </p>
 
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('digital_marketing') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.digital_marketing') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -313,8 +313,8 @@
               </p>
 
               <div class="service--cta">
-                <a href="{{ url_for('contact') }}" class="nebtn">Let's discuss &rarr;</a>
-                <a href="{{ url_for('ecommerce_development') }}" class="nebtn">Learn more</a>
+                <a href="{{ url_for('main.contact') }}" class="nebtn">Let's discuss &rarr;</a>
+                <a href="{{ url_for('main.ecommerce_development') }}" class="nebtn">Learn more</a>
               </div>
             </div>
             
@@ -414,19 +414,19 @@
 
           <ul class="footer-nav">
             <li>
-              <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+              <a class="footer-link" href="{{ url_for('main.index') }}">Home</a>
             </li>
             <li>
-              <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+              <a class="footer-link" href="{{ url_for('main.about') }}">About Us</a>
             </li>
             <li>
-              <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+              <a class="footer-link" href="{{ url_for('main.products') }}">Products</a>
             </li>
             <li>
-              <a class="footer-link" href="{{ url_for('portfolio') }}">Portfolio</a>
+              <a class="footer-link" href="{{ url_for('main.portfolio') }}">Portfolio</a>
             </li>
             <li>
-              <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+              <a class="footer-link" href="{{ url_for('main.contact') }}">Contact Us</a>
             </li>
           </ul>
         </nav>

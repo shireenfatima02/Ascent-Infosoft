@@ -315,7 +315,7 @@
       Get a free consultation with our E-Commerce strategists.
     </p>
 
-    <a class="connect-link" href="{{ url_for('contact') }}">Start Your Project</a>
+    <a class="connect-link" href="{{ url_for('main.contact') }}">Start Your Project</a>
   </div>
 </section>
 
@@ -325,19 +325,22 @@
 {% block footer_quick_links %}
 
 <li>
-  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+  <a class="footer-link" href="{{ url_for('main.index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('main.about') }}">About Us</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+  <a class="footer-link" href="{{ url_for('main.services') }}">Services</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+  <a class="footer-link" href="{{ url_for('main.products') }}">Products</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+  <a class="footer-link" href="{{ url_for('main.contact') }}">Contact Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('auth.client_login') }}">Client Login</a>
 </li>
 
 {% endblock %}

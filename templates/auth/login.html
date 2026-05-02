@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block css_js %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+{% endblock %}
+
+{% block title %}Sign in{% endblock %}
+
+{% block content %}
+<section class="auth-wrapper">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <img src="{{ url_for('static', filename='images/ascent-infosoft-logo.svg') }}" alt="Ascent Infosoft" />
+    </div>
+
+    <!-- <h1 class="auth-title">Sign in</h1> -->
+
+    {# Only show login-specific or error messages here #}
+    {% with messages = get_flashed_messages(with_categories=true, category_filter=['error','login']) %}
+      {% if messages %}
+        <div class="auth-flash">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="auth-field">
+        <label for="email">Username</label>
+        {{ form.email(class_='auth-input', placeholder='Username', autocomplete='username', autofocus=true) }}
+        {% for e in form.email.errors %}<div class="auth-error">{{ e }}</div>{% endfor %}
+      </div>
+
+      <div class="auth-field">
+        <label for="password">Password</label>
+        {{ form.password(class_='auth-input', placeholder='Your password', autocomplete='current-password') }}
+        {% for e in form.password.errors %}<div class="auth-error">{{ e }}</div>{% endfor %}
+      </div>
+
+      <div class="auth-actions">
+        <label class="auth-remember">
+          {{ form.remember() }}
+          <span>Remember me</span>
+        </label>
+        <a class="auth-link" href="#" aria-disabled="true" onclick="return false;">Forgot password?</a>
+      </div>
+
+      <button class="auth-btn btn btn--form" type="submit">{{ form.submit.label.text or 'Login' }}</button>
+    </form>
+
+    <div class="auth-meta">
+      <a class="auth-link" href="{{ url_for('main.index') }}">Back to Home</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block footer_quick_links %}
+<li>
+  <a class="footer-link" href="{{ url_for('main.index') }}">Home</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('main.about') }}">About Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('main.services') }}">Services</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('main.products') }}">Products</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('main.contact') }}">Contact Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('auth.client_login') }}">Client Login</a>
+</li>
+{% endblock %}

@@ -238,7 +238,7 @@
 
   <div class="product-contact">
     <div>
-      <a href="{{ url_for('contact') }}" class="btn btn--form">Schedule a Demo!</a>
+      <a href="{{ url_for('main.contact') }}" class="btn btn--form">Schedule a Demo!</a>
       <a href="tel:+91-9373344880" class="btn btn--form">Call Us: +91 937-33-44-880</a>
       <a href="mailto:aamir.m@ascentinfosoft.com" class="btn btn--form">Email: aamir.m@ascentinfosoft.com</a>
     </div>
@@ -255,19 +255,22 @@
 {% block footer_quick_links %}
 
 <li>
-  <a class="footer-link" href="{{ url_for('index') }}">Home</a>
+  <a class="footer-link" href="{{ url_for('main.index') }}">Home</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('about') }}">About Us</a>
+  <a class="footer-link" href="{{ url_for('main.about') }}">About Us</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('services') }}">Services</a>
+  <a class="footer-link" href="{{ url_for('main.services') }}">Services</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('products') }}">Products</a>
+  <a class="footer-link" href="{{ url_for('main.products') }}">Products</a>
 </li>
 <li>
-  <a class="footer-link" href="{{ url_for('contact') }}">Contact Us</a>
+  <a class="footer-link" href="{{ url_for('main.contact') }}">Contact Us</a>
+</li>
+<li>
+  <a class="footer-link" href="{{ url_for('auth.client_login') }}">Client Login</a>
 </li>
 
 {% endblock %}

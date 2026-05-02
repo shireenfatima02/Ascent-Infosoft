@@ -1,0 +1,98 @@
+{% extends 'dashboard_base.html' %}
+
+{% block css_js %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+  <script defer src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<section class="admin-page container">
+  <div class="admin-topbar">
+    <div>
+      <h1 class="admin-title">Admin Dashboard</h1>
+      <p class="admin-subtitle">Overview and organization management</p>
+    </div>
+    <div class="admin-actions">
+      <button id="open-org-modal" class="btn btn--form" type="button">Add Organization</button>
+      <a class="btn btn--ghost" href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
+  </div>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="admin-flash admin-flash--separate">
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <div class="admin-stats">
+    <div class="stat">
+      <div class="stat-value">{{ users_count }}</div>
+      <div class="stat-label">Users</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">{{ files_count }}</div>
+      <div class="stat-label">Files</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">{{ orgs|length }}</div>
+      <div class="stat-label">Organizations</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><h2>Organizations</h2></div>
+    {% if orgs %}
+      <div class="org-grid">
+        {% for org in orgs %}
+          <a class="org-card" href="{{ url_for('admin.org_files', org_id=org.id) }}">
+            <div class="org-name">{{ org.name }}</div>
+            <!-- <div class="org-slug">{{ org.slug }}</div> -->
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty">No organizations yet.</div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Add Organization Modal -->
+<div id="org-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="org-modal-title">
+    <div class="modal-header">
+      <h3 id="org-modal-title">Add Organization</h3>
+      <button class="modal-close" data-close aria-label="Close">×</button>
+    </div>
+    <form class="modal-body" action="{{ url_for('admin.create_organization') }}" method="post">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label class="modal-row">
+        <span>Organization Abbreviation</span>
+        <input class="admin-input" name="name" required>
+      </label>
+      <label class="modal-row">
+        <span>Organization Name</span>
+        <input class="admin-input" name="slug" required>
+      </label>
+      <label class="modal-row">
+        <span>Username</span>
+        <input class="admin-input" name="username" autocomplete="username" required>
+      </label>
+      <label class="modal-row">
+        <span>Password</span>
+        <input class="admin-input" type="password" name="password" autocomplete="new-password" required>
+      </label>
+      <div class="modal-actions">
+        <button type="button" class="btn btn--ghost" data-close>Cancel</button>
+        <button class="btn btn--form" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+  </div>
+{% endblock %}

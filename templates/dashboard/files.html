@@ -1,0 +1,101 @@
+{% extends 'dashboard_base.html' %}
+
+{% block css_js %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+  <script defer src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
+
+{% block title %}Files{% endblock %}
+
+{% block content %}
+<section class="dash-page container">
+  <div class="dash-org-name">
+    {{ current_user.organization.slug if current_user.is_authenticated and current_user.organization else '' }}
+  </div>
+  <div class="dash-header">
+    <div>
+      <h1 class="dash-title">Backup Files</h1>
+      <p class="dash-subtitle">Upload and manage files for your organization.</p>
+    </div>
+    <div class="dash-actions">
+      <a class="btn btn--ghost" href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
+  </div>
+
+  <div class="card upload-card">
+    <form id="upload-form" action="{{ url_for('dashboard.upload_file') }}" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input id="file-input" class="hidden-input" type="file" name="file" accept=".zip,.rar" required>
+      <div id="upload-area" class="upload-area" role="button" tabindex="0" aria-label="Choose a file to upload">
+        <div class="upload-icon" aria-hidden="true">📎</div>
+        <div class="upload-text">
+          <strong>Drag & drop</strong> your file here, or
+          <span class="link-like">browse</span>
+        </div>
+        <div id="selected-name" class="upload-selected" aria-live="polite"></div>
+        <div id="upload-error" class="auth-error" style="display:none"></div>
+      </div>
+      <div class="upload-actions">
+        <button id="upload-btn" class="btn btn--form" type="submit" disabled>Upload</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card files-card">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="dash-flash">
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <div class="card-header">
+      <h2>Recent Files</h2>
+    </div>
+    {% if files %}
+    <div class="table-wrap">
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Uploaded By</th>
+            <th>Uploaded On</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for f in files %}
+          <tr>
+            <td class="file-name" title="{{ f.original_name }}">{{ f.original_name }}</td>
+            <td>{{ (f.size or 0) // 1024 }} KB</td>
+            <td>{% if f.uploader and f.uploader.role and f.uploader.role.upper() == 'ADMIN' %}Ascent Infosoft{% else %}Organization{% endif %}</td>
+            <td>{{ f.created_at.strftime('%Y-%m-%d %H:%M') if f.created_at else '' }}</td>
+            <td class="actions">
+              {% if not f.is_deleted %}
+                <a class="btn btn--ghost btn--icon" href="{{ url_for('dashboard.download_file', file_id=f.id) }}" aria-label="Download">
+                  <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1zM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1z"/>
+                  </svg>
+                  <span class="visually-hidden">Download</span>
+                </a>
+              {% else %}
+                <span class="badge badge--muted">Deleted</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+      <div class="empty">
+        <div class="empty-icon" aria-hidden="true">📂</div>
+        <p class="empty-text">No files yet. Upload your first file to get started.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
