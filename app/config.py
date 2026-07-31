@@ -15,7 +15,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Uploads
-    MAX_CONTENT_LENGTH = int(os.environ.get("MAX_CONTENT_LENGTH", 16 * 1024 * 1024))
+    MAX_CONTENT_LENGTH = int(os.environ.get("MAX_CONTENT_LENGTH", 120 * 1024 * 1024))
     UPLOAD_FOLDER = os.environ.get("UPLOAD_FOLDER")  # default: instance/uploads
     # Only allow archive uploads
     ALLOWED_EXTENSIONS = {"zip", "rar"}

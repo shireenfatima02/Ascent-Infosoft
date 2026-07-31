@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 from flask import Flask
+from flask import flash, redirect, request, url_for
+from werkzeug.exceptions import RequestEntityTooLarge
 
 # Ensure .env is loaded before importing config
 try:
@@ -74,5 +76,13 @@ def create_app(config_name: str | None = None) -> Flask:
         csrf.exempt(main_routes.index)
     except Exception:
         pass
+
+    @app.errorhandler(RequestEntityTooLarge)
+    def handle_file_too_large(_error):
+        flash("File is too large. Maximum allowed size is 120 MB.", "error")
+        referrer = request.referrer
+        if referrer:
+            return redirect(referrer)
+        return redirect(url_for("main.index"))
 
     return app

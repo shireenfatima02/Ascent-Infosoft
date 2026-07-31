@@ -70,7 +70,7 @@
           {% for f in files %}
           <tr>
             <td class="file-name" title="{{ f.original_name }}">{{ f.original_name }}</td>
-            <td>{{ (f.size or 0) // 1024 }} KB</td>
+            <td>{{ '%.2f'|format((f.size or 0) / (1024 * 1024)) }} MB</td>
             <td>{% if f.uploader and f.uploader.role and f.uploader.role.upper() == 'ADMIN' %}Ascent Infosoft{% else %}Organization{% endif %}</td>
             <td>{{ f.created_at.strftime('%Y-%m-%d %H:%M') if f.created_at else '' }}</td>
             <td class="actions">
